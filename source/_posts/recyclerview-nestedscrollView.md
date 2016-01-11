@@ -10,7 +10,7 @@ tags: RecyclerView
 
 <!--more-->
 
-####如何使用
+#### 如何使用
 首先我们先看下布局文件
 ![Smithsonian Image](/images/recyclerview-060105.png)
 在我们使用ListView的时候，如果需要嵌套，我们一般的做法是重写ListView的onMearsure方法，如下：
