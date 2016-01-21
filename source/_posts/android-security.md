@@ -2,7 +2,7 @@
 title: Android安全之完整性校验
 date: 2016-01-17 08:14:19
 categories: Android
-tags: Android
+tags: Android安全
 ---
 最近在研究Android安全应用加固相关的技术，今天我先简单说下APK的完整性校验，首先我们先看一下一般APK里面的构造，下图为直接解压APK的目录结构：
 <!--more-->
