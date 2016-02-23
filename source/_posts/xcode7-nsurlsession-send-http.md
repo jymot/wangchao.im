@@ -1,5 +1,5 @@
 ---
-title: xcode7-nsurlsession-send-http
+title: xcode7中NSURLSession发送HTTP异常
 date: 2016-02-23 16:52:17
 categories: iOS
 tags: iOS
