@@ -23,8 +23,7 @@ tags: RecyclerView
 但是RecyclerView并不是这样做，而是通过修改RecyclerView.LayoutManager实现，比如重写LinearLayoutManager，GridLayoutManager
 或StaggeredGridLayoutManager，下面我们以LinearLayoutManager为例，如下：
 ``` java
-public class WrappingLinearLayoutManager extends LinearLayoutManager
-{
+public class WrappingLinearLayoutManager extends LinearLayoutManager{
 
     public WrappingLinearLayoutManager(Context context) {
         super(context);
@@ -37,7 +36,7 @@ public class WrappingLinearLayoutManager extends LinearLayoutManager
     }
 
     @Override public void onMeasure(RecyclerView.Recycler recycler, RecyclerView.State state,
-            int widthSpec, int heightSpec) {
+                          int widthSpec, int heightSpec) {
         final int widthMode = View.MeasureSpec.getMode(widthSpec);
         final int heightMode = View.MeasureSpec.getMode(heightSpec);
 
@@ -46,6 +45,10 @@ public class WrappingLinearLayoutManager extends LinearLayoutManager
 
         int width = 0;
         int height = 0;
+        //
+        if (state.getItemCount() == 0 || state.didStructureChange() || !state.isMeasuring()){
+            return;
+        }
         for (int i = 0; i < getItemCount(); i++) {
             if (getOrientation() == HORIZONTAL) {
                 measureScrapChild(recycler, i,
@@ -88,7 +91,7 @@ public class WrappingLinearLayoutManager extends LinearLayoutManager
     }
 
     private void measureScrapChild(RecyclerView.Recycler recycler, int position, int widthSpec,
-            int heightSpec, int[] measuredDimension) {
+                                   int heightSpec, int[] measuredDimension) {
 
         View view = recycler.getViewForPosition(position);
         if (view.getVisibility() == View.GONE) {
@@ -114,6 +117,7 @@ public class WrappingLinearLayoutManager extends LinearLayoutManager
         measuredDimension[1] = getDecoratedMeasuredHeight(view) + p.bottomMargin + p.topMargin;
         recycler.recycleView(view);
     }
+
 }
 ```
 然后我们给RecyclerView设置我们自定义的LayoutManager，然后禁止RecyclerView滑动和设置其可改变大小，如下：
