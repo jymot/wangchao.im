@@ -10,6 +10,9 @@ tags: iOS
     resource load since it is insecure. Temporary exceptions can be configured 
     via your app's Info.plist file.
 ```
+
+<!--more-->
+
 解决办法如下为在info.plist文件中添加：
 ```
 <key>NSAppTransportSecurity</key>
