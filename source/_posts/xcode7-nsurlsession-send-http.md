@@ -6,7 +6,9 @@ tags: iOS
 ---
 今天在使用NSURLSession时候报了如下的错误：
 ```
-    Application Transport Security has blocked a cleartext HTTP (http://) resource load since it is insecure. Temporary exceptions can be configured via your app's Info.plist file.
+    Application Transport Security has blocked a cleartext HTTP (http://) 
+    resource load since it is insecure. Temporary exceptions can be configured 
+    via your app's Info.plist file.
 ```
 解决办法如下为在info.plist文件中添加：
 ```

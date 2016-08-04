@@ -8,6 +8,9 @@ tags: Android Permission
 Starting in Android 5.0, the system enforces a new uniqueness restriction on custom permissions 
 for apps that are signed with different keys. Now only one app on a device can define a given 
 custom permission (as determined by its name), unless the other app defining the permission is 
+
+<!--more-->
+
 signed with the same key. If the user tries to install an app with a duplicate custom permission 
 and is not signed with the same key as the resident app that defines the permission, the system blocks 
 the installation.

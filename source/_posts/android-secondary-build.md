@@ -1,5 +1,5 @@
 ---
-title: Android二次打包
+title: Android二次开发打包
 date: 2016-01-20 21:51:02
 categories: Android
 tags: Android安全
@@ -42,5 +42,5 @@ jarsigner命令是可用的。
 ```
 执行后需要录入keystore的口令，最后就会生成签名后的APK`app_signed.apk`
 
-[Android逆向开发之Smali]
+[Android逆向开发之Smali]: http://wangchao.im/2016/08/04/android-smali-develop/
 [ApkTool]: https://github.com/iBotPeaches/Apktool

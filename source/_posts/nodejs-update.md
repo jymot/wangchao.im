@@ -8,6 +8,7 @@ tags: NodeJs
 ``` linux
     npm update -g
 ```
+<!--more-->
 ### 2.更新nodejs
 #### 1) Clear NPM's cache:
 ``` linux

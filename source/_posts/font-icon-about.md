@@ -19,6 +19,8 @@ tags: 字体图标
     url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 ```
+<!--more-->
+
 2.定义使用iconfont的样式
 ```css
 .iconfont{

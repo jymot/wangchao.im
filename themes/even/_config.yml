@@ -1,0 +1,41 @@
+# navbar
+menu:
+  Home: /
+  Archives: /archives/
+  # Categories: /categories/
+  Tags: /tags/
+  About: /about/
+
+# site icon
+favicon: /favicon.ico
+
+# comments
+comments:
+  post: true
+  about: true
+
+# article directory sidebar
+sidebar: true
+
+# Analytics
+## Baidu Analytics
+baidu_analytics: c1182642a61b1fd92ac710a6df67bb1c
+## Google Analytics
+#google_analytics: UA-74273646-1
+
+# Comments
+## Duoshuo
+# duoshuo_shortname: ahonn
+## Disqus
+disqus_shortname: WangChao
+
+# Social links
+social:
+  email: mailto:magician.of.technique@aliyun.com
+  # stack-overflow:
+  # twitter:
+  # facebook:
+  github: https://github.com/motcwang
+#  weibo: http://weibo.com/
+#  zhihu: https://www.zhihu.com/people/ahonn
+  rss: /atom.xml

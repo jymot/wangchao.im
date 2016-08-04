@@ -10,6 +10,7 @@ tags: Git
     git config --global user.name "UserName"
     git config --global user.email "username@xx.xx"
 ```
+<!--more-->
 将上面的UserName和username@xx.xx替换成你的用户名和邮件
 #### 2.生成密钥
 使用ssh-keygen生成密钥，如下：
