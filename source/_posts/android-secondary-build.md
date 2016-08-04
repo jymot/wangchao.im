@@ -18,7 +18,8 @@ jarsigner命令是可用的。
 ```bash
     apktool d -o app app.apk
 ```
-就会将反编译结果放到app目录下，然后就可以修改反编译后的app目录中的内容，比如图片或代码
+就会将反编译结果放到app目录下，然后就可以修改反编译后的app目录中的内容，比如图片或代码。
+如果需要修改代码，需要修改对应的Smali文件，关于Smali可以参见[Android逆向开发之Smali]
 
 #### 3.编译
 接下来执行如下命令，将修改后的目录重新打包为APK
@@ -41,4 +42,5 @@ jarsigner命令是可用的。
 ```
 执行后需要录入keystore的口令，最后就会生成签名后的APK`app_signed.apk`
 
+[Android逆向开发之Smali]
 [ApkTool]: https://github.com/iBotPeaches/Apktool
