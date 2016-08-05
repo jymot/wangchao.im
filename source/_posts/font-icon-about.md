@@ -2,7 +2,7 @@
 title: 多平台使用字体图标
 date: 2016-05-06 13:40:41
 categories: Client
-tags: 字体图标
+tags: [字体图标, Android, iOS, HTML]
 ---
 
 最近比较流行字体图标，下面说一下分别在HTML、Android和iOS中怎么使用字体图标。

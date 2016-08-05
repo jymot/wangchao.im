@@ -2,7 +2,7 @@
 title: Android二次开发打包
 date: 2016-01-20 21:51:02
 categories: Android
-tags: Android安全
+tags: [Android, Android安全]
 ---
 关于Android二次打包，有的是为了更换证书，有的是为了修改资源，有的是为了注入广告，不管处于什么样的目的，都希望
 用于正当渠道。废话不多说，直接进入正题。

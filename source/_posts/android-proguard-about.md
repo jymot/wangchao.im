@@ -2,7 +2,7 @@
 title: Android混淆指令
 date: 2016-07-29 08:32:32
 categories: Android
-tags: Proguard
+tags: [Android, Proguard]
 ---
 在Android打包过程中，混淆dex是不可或缺的，下面简单介绍几个应用在混淆文件中的指令。
 

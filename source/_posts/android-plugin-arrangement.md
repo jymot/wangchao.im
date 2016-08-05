@@ -2,7 +2,7 @@
 title: Android插件化相关知识点
 date: 2016-05-04 08:36:43
 categories: Android
-tags: Android Plugin
+tags: [Android, Android Plugin]
 ---
 
 关于Android插件化开发涉及到的一些知识点汇总：

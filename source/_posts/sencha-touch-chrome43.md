@@ -2,7 +2,7 @@
 title: sencha-touch-chrome43
 date: 2016-01-08 08:42:43
 categories: Web
-tags: sencha touch
+tags: [Javascript, sencha touch]
 ---
 解决 Sencha Touch 在 Chrome 43 上面滑动问题的bug
 ![Smithsonian Image](/images/Screen-Shot-2015-04-28-at-9.10.36-AM.png)

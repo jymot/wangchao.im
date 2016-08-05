@@ -2,7 +2,7 @@
 title: OpenSSL之RSA
 date: 2016-01-21 22:02:22
 categories: Openssl
-tags: RSA
+tags: [Openssl, RSA]
 ---
 OpenSSL集成了众多密码算法，今天主要说下RSA非对称加解密以及在Android中的使用。
 那么我们需要先了解一下OpenSSL关于RSA的相关命令使用方法

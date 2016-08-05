@@ -2,7 +2,7 @@
 title: Linux后台运行与停止进程
 date: 2016-01-10 11:05:47
 categories: Linux
-tags: nohup
+tags: [nohup, Linux]
 ---
 有时候我们在Terminal中其服务时候，需要让其在关闭Terminal的情况下也可以运行，那么我们这里用到的
 是nohup命令，执行命令如下:

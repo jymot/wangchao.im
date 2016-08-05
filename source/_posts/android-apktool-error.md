@@ -2,7 +2,7 @@
 title: ApkTool反编译报错
 date: 2016-01-20 19:59:19
 categories: Android
-tags: ApkTool
+tags: [ApkTool, Android]
 ---
 今天需要使用ApkTool反编译APK，因为好久没用了，所以就去github上面下载最新的版本[ApkTool]
 然后替换对应的jar和bash脚本

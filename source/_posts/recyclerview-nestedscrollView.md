@@ -2,7 +2,7 @@
 title: RecyclerView嵌套使用
 date: 2016-01-09 10:32:22
 categories: Android
-tags: RecyclerView
+tags: [Android, RecyclerView]
 ---
 一般情况下RecyclerView是不推荐嵌套使用的，我们可以用使用不同的Type使RecyclerView达到嵌套的效果，
 这里先不介绍这种方式。因为最近项目需要将RecyclerView嵌套在NestedScrollView中使用，下面记录一下

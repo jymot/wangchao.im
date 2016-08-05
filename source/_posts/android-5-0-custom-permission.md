@@ -2,7 +2,7 @@
 title: Android 5.0后自定义权限注意事项
 date: 2016-05-03 13:35:05
 categories: Android
-tags: Android Permission
+tags: [Android Permission, Android]
 ---
 ### Android 5.0 说明
 Starting in Android 5.0, the system enforces a new uniqueness restriction on custom permissions 

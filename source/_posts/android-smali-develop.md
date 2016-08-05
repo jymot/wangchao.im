@@ -2,7 +2,7 @@
 title: Android逆向开发之Smali
 date: 2016-08-04 12:17:19
 categories: Android
-tags: Smali
+tags: [Smali, Android]
 ---
 
 ### 了解

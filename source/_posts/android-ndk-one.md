@@ -2,7 +2,7 @@
 title: Android NDK - Type Signatures
 date: 2016-08-02 08:08:20
 categories: Android
-tags: NDK
+tags: [Android, NDK]
 ---
 ### 1.The JNI uses the Java VM’s representation of type signatures.
 
