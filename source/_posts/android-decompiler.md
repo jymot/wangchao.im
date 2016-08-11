@@ -2,7 +2,7 @@
 title: Android 反编译工具
 date: 2016-08-09 21:27:10
 categories: Android
-tags: [Android, Android安全,反编译]
+tags: [Android, Android安全, 反编译]
 ---
 整理一些关于Android反编译相关的工具，点击标题查阅官方详细说明。
 #### 1.[ApkTool]

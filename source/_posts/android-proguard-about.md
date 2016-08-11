@@ -30,5 +30,8 @@ tags: [Android, Proguard]
  不混淆的类或接口，如：-keep class A 不混淆A类类名
  * -keepclasseswithmembers
  保留类名和成员名，如：-keepclasseswithmembers class A 不混淆A类类名以及成员
+ * -keepnames
+ -keepnames class * implements java.io.Serializable {*;}
+ 指定想要保留的类名和类成员，如果shrinking时候没有删除这个类。比如，保留所有实现Serializable接口的类的类名。不使用的类仍然会被删除。只适用于混淆。
  
 关于混淆的内容还有很多，先写到这，后面会陆续更新。
