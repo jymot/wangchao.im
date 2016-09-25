@@ -20,8 +20,7 @@ tags: [Android, RecyclerView]
               super.onMeasure(widthMeasureSpec, expandSpec); 
 }
 ```
-但是RecyclerView并不是这样做，而是通过修改RecyclerView.LayoutManager实现，比如重写LinearLayoutManager，GridLayoutManager
-或StaggeredGridLayoutManager，下面我们以LinearLayoutManager为例，如下：
+但是RecyclerView并不是这样做，而是通过修改RecyclerView.LayoutManager实现，比如重写LinearLayoutManager，GridLayoutManager或StaggeredGridLayoutManager，下面我们以LinearLayoutManager为例，如下：
 ``` java
 public class WrappingLinearLayoutManager extends LinearLayoutManager{
 

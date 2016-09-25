@@ -30,8 +30,7 @@ OpenSSL集成了众多密码算法，今天主要说下RSA非对称加解密以�
 我们用私钥对fileName.en文件解密得到fileName.de文件
 
 ### Android
-说到这里，对于RSA的基本操作就结束了，但是我们一般生成密钥对后，我们需要在我们的代码中使用，这里以Android
-为例，但是我们在代码中不能直接使用之前生成的私钥，需要对密钥进行PKCS#8编码，执行如下命令：
+说到这里，对于RSA的基本操作就结束了，但是我们一般生成密钥对后，我们需要在我们的代码中使用，这里以Android为例，但是我们在代码中不能直接使用之前生成的私钥，需要对密钥进行PKCS#8编码，执行如下命令：
 ```bash
     openssl pkcs8 -topk8 -in private.pem -out private_android.pem -nocrypt
 ```

@@ -4,8 +4,7 @@ date: 2016-01-12 13:39:26
 categories: Android
 tags: Android
 ---
-Android中TextView并不支持所有的HTML标签，如果需要更为复杂的操作最好使用WebView，
-今天再网上看到TextView支持的HTML标签的总结，记录在这里：
+Android中TextView并不支持所有的HTML标签，如果需要更为复杂的操作最好使用WebView，今天再网上看到TextView支持的HTML标签的总结，记录在这里：
 <!--more-->
 ``` html
     HTML Tags Supported By TextView

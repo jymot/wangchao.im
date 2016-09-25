@@ -17,8 +17,7 @@ tags: Git
 ``` linux
     ssh-keygen -t rsa -C "username@xx.xx"
 ```
-执行命令后，会提示录入密码，可忽略（如果不是第一次执行该命令，会提示是否覆盖），最后在用户目录下的.ssh目录
-中会生成id_rsa和id_rsa.pub文件
+执行命令后，会提示录入密码，可忽略（如果不是第一次执行该命令，会提示是否覆盖），最后在用户目录下的.ssh目录中会生成id_rsa和id_rsa.pub文件
 #### 3.将密钥添加至ssh-agent
 我们可以将密钥添加到ssh-agent中进行管理，再添加之前，需要确保ssh-agent可用，执行如下命令：
 ``` linux

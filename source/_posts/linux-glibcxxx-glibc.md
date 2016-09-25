@@ -78,8 +78,7 @@ tags: [GLIBCXX, Linux]
     /root/src/gcc-4.8.5/prev-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6
     /root/src/gcc-4.8.5/prev-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.19
 ```
-我们看到 /usr/local/lib64/libstdc++.so.6.0.19 ，所以gcc安装时候把libstdc++.so.6.0.19安装到了
-/usr/local/lib64目录下，所以我们现在只需要把libstdc++.so.6链接指向libstdc++.so.6.0.19即可，执行如下：
+我们看到 /usr/local/lib64/libstdc++.so.6.0.19 ，所以gcc安装时候把libstdc++.so.6.0.19安装到了/usr/local/lib64目录下，所以我们现在只需要把libstdc++.so.6链接指向libstdc++.so.6.0.19即可，执行如下：
 ``` linux
     cp /usr/local/lib64/libstdc++.so.6.0.19 /usr/lib64 
     rm -rf /usr/lib64/libstdc++.so.6 
