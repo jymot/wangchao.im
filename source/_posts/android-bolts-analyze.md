@@ -11,7 +11,7 @@ tags: [Android, Android Bolts Task]
 
 ### 2.下载和使用
 #### 2.1下载
-下载最新的JAR或者使用Gradle,Gradle依赖如下:
+下载最新的[JAR]或者使用Gradle,Gradle依赖如下:
 ```gradle
 dependencies {
   compile 'com.parse.bolts:bolts-tasks:x.x.x' //替换最新的版本号,如1.4.0
