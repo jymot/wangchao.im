@@ -1,5 +1,5 @@
 ---
-title: linux Centos6.5 GLIBCXX和GLIBC编译错误
+title: linux CentOS6.5 GLIBCXX和GLIBC编译错误
 date: 2016-01-10 10:43:40
 categories: Linux
 tags: [GLIBCXX, Linux]
