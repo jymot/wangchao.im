@@ -41,6 +41,6 @@ date: 2016-01-09 11:38:21
 ---
 
 ### 自我评价
-喜欢钻研新技术,对技术有强烈的占有欲,对于代码有一定的洁癖,能听懂人话,具有良好的团队意识。
+喜欢钻研新技术,对技术有强烈的占有欲,对于代码有一定的洁癖,具有良好的理解能力和团队意识。
 
 [magician.of.technique@aliyun.com]: mailto:magician.of.technique@aliyun.com
