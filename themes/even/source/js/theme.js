@@ -2,20 +2,40 @@
 
 $(function() {
   // Back to top
-  $(function () {
+  (function () {
     var $back2top = $("#back2top");
 
-    $back2top.click(function (e) {
-      var timer = setInterval(function () {
-        var top = $(window).scrollTop();
-        $(window).scrollTop(Math.floor(-top / 5) + top);
-      
-        if (!top) {
-          clearInterval(timer);
-        }
-      }, 30); 
+    $(window).scroll(function () {
+      if($(window).scrollTop() > 100) {
+        $back2top.animate({
+          opacity: 1
+        }, 'slow', 'ease');
+      } else {
+        $back2top.animate({
+          opacity: 0
+        }, 'slow', 'ease');
+      }
     });
-  });
+
+    function smoothScroll(el, to, duration) {
+      if (duration < 0) {
+        return;
+      }
+      var difference = to - $(window).scrollTop();
+      var perTick = difference / duration * 10;
+      this.scrollToTimerCache = setTimeout(function() {
+        if (!isNaN(parseInt(perTick, 10))) {
+          window.scrollTo(0, $(window).scrollTop() + perTick);
+          smoothScroll(el, to, duration - 10);
+        }
+      }.bind(this), 10);
+    }
+
+    $back2top.click(function (e) {
+      e.preventDefault();
+      smoothScroll($(window), 0, 200);
+    });
+  })();
 
   // Post follow sidebar
   (function() {
