@@ -5,10 +5,12 @@ include mixins/paginator
 block title
   title
     if page.archive
-        != __('Archive') + " · " + config.title
+        != __('Archives') + " · " + config.title
     if page.tag
         != page.tag + " · " + config.title
-        
+    if page.category
+        != page.category + " · " + config.title
+
 block container
   if page.archive
     +archive()

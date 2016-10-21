@@ -2,12 +2,17 @@
 
 ### 目录
 - [主题配置](#主题配置)
+  + [修改博客主题色](#修改博客主题色)
+  + [修改文章内锚点样式](#修改文章内锚点样式)
   + [设置首页文章数](#设置首页文章数)
   + [设置归档页文章数](#设置归档页文章数)
+  + [设置标签页文章数](#设置标签页文章数)
   + [添加分类页](#添加分类页)
   + [添加标签页](#添加标签页)
   + [添加关于页](#添加关于页)
+  + [添加自定义页面](#添加自定义页面)
   + [开启/关闭文章侧栏目录](#开启/关闭文章侧栏目录)
+  + [修改首页文章预览位置](#修改首页文章预览位置)
   + [修改站点图标](#修改站点图标)
   + [修改站点建立时间](#修改站点建立时间)
   + [修改社交链接](#社交链接)
@@ -21,6 +26,47 @@
 
 ### 主题配置
 
+#### 修改博客主题色
+Even 主题自带以上 5 种主题色，分别是：
+- Default: <span style="background-color: #c05b4d;">#c05b4d</span>
+- Mint Green: <span style="background-color: #16982B;">#16982B</span>
+- Cobalt Blue: <span style="background-color: #0047AB;">#0047AB</span>
+- Hot Pink: <span style="background-color: #FF69B4;">#FF69B4</span>
+- Dark Violet: <span style="background-color: #9932CC;">#9932CC</span>
+
+修改主题配置文件中的 `theme.color` 项选择主题色：
+
+```
+# theme color
+# Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet
+theme:
+  color: Default  # 默认配色
+```
+##### 自定义主题颜色
+修改主题目录下 `source/css/_global.scss` 中的 `$theme-color-map` 添加颜色：
+
+```
+$theme-color-map: (
+  'Default': #c05b4d #f8f5ec,
+  'Mint Green': #16982B #f5f5f5,
+  'Cobalt Blue': #0047AB #f0f2f5,
+  'Hot Pink': #FF69B4 #f8f5f5,
+  'Dark Violet': #9932CC #f5f4fa
+) !default;
+```
+
+键即为配置文件中的 `theme.color` 的值，第一个颜色为全局的主题颜色，第二个颜色为代码块的背景颜色（可根据主题颜色计算）。
+
+添加后，修改主题配置文件中的 `theme.color` 项选择自定义的主题色即可。
+
+#### 修改文章内锚点样式
+默认文章内的标题锚点为 `§`，可通过主题配置文件修改
+
+```
+theme:
+  headerlink: "§"  # 可修改为 "#" 或者 "" 等
+```
+
 #### 设置首页文章数
 修改站点配置文件中的 `per_page` 项：
 ```
@@ -31,9 +77,15 @@ pagination_dir: page
 ```
 
 #### 设置归档页文章数
-在站点配置文件下添加 `archive_generator` 项：
+在站点根目录下执行安装 `hexo-generator-archive`：
 ```
-# Generator-archive  需要 hexo-generator-archive
+npm install hexo-generator-archive --save
+```
+
+在站点配置文件下添加 `archive_generator` 项设置归档页文章数：
+
+```
+# Generator-archive
 archive_generator:
   per_page: 20  # 归档页文章数, 参数为 0 时不分页
   yearly: false
@@ -41,6 +93,18 @@ archive_generator:
   daily: false
 ```
 
+#### 设置标签页文章数
+在站点根目录下执行安装 `hexo-generator-tag`:
+```
+npm install hexo-generator-tag --save
+```
+
+在站点配置文件下添加 `tag_generator` 项：
+```
+# Generator-tag
+tag_generator:
+  per_page: 10 # 标签页文章数, 参数为 0 时不分页
+```
 
 #### 添加分类页
 - 新建页面
@@ -120,6 +184,33 @@ menu:
   About: /about/   # 添加 About 选项
 ```
 
+#### 添加自定义页面
+- 新建页面
+
+在博客根目录下：
+```
+hexo new page xxxx
+```
+- 设置页面模版
+
+在新建的 `source/xxxx/index.md` 中添加：
+```
+---
+title: xxxx
+layout: page   # 添加使用 page 模版
+---
+```
+- 修改菜单
+
+在主题配置文件中的 `Menu` 项中添加：
+```
+menu:
+  Home: /
+  Archives: /archives/
+  About: /about/ 
+  xxxx: /xxxx/  # 确保与 source/xxxx/index.md 文件中的 title 一直
+```
+
 #### 开启/关闭文章侧栏目录
 
 修改主题配置文件中的 `sidebar` 项，true 为开启，false 为关闭
@@ -128,6 +219,11 @@ menu:
 # article directory sidebar
 sidebar: true
 ```
+
+#### 修改首页文章预览位置
+在文章中添加 `<!-- more -->` 标记，标记上方的内容将会在首页显示。
+
+即 Read more 的位置将会在标记处。
 
 #### 修改站点图标
 修改主题配置文件中的 `favicon` 项

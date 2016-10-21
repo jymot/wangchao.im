@@ -9,6 +9,13 @@ menu:
 # site icon
 favicon: /favicon.ico
 
+# theme styling
+# color: Default | Mint Green | Cobalt Blue | Hot Pink | Dark Violet
+theme:
+  color: Default
+  headerlink: "§"
+
+
 # comments
 comments:
   post: true
