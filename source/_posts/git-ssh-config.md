@@ -1,6 +1,6 @@
 ---
 title: Git配置SSH
-date: 2016-01-11 21:07:32
+date: 2015-01-11 21:07:32
 categories: Git
 tags: Git
 ---

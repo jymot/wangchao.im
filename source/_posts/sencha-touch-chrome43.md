@@ -1,6 +1,6 @@
 ---
 title: sencha-touch-chrome43
-date: 2016-01-08 08:42:43
+date: 2015-01-08 08:42:43
 categories: Web
 tags: [Javascript, sencha touch]
 ---
