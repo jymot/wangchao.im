@@ -2,7 +2,7 @@
 title: Android 5.0以下TLS1.x SSLHandshakeException
 date: 2016-11-30 20:17:02
 categories: [Android]
-tags: [Android]
+tags: [Android, TLSv1.x]
 ---
 最近把App的所有请求都换成Https,在测试的时候,部分手机发现请求失败,失败的异常信息如下:
 ```
