@@ -522,5 +522,9 @@ Task id #6752
 ```
 我们发现FirstActivity没了,也就证实了之前说的,设置该属性的Activity,其所在的任务栈再次进入前台时,就会被销毁。
 
+关于其它属性说明参见[官方文档说明]
+
 # 最后
 关于启动模式,Intent Flag,和<activity/>暂时先整理这么多,希望对后来人有所帮助,有任何疑问欢迎联系我。
+
+[官方文档说明]: https://developer.android.google.cn/guide/topics/manifest/activity-element.html

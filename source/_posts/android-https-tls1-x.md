@@ -22,7 +22,7 @@ error:14077102:SSL routines:SSL23_GET_SERVER_HELLO:unsupported protocol (externa
 
 <!--more-->
 
-知道问题的原因,我们就要解决,当然服务端可以支持TLSv1版本,这样我们就都可以请求成功,但是这并不是最好的解决,我们当然要让我们的App支持新的TLS协议才对。
+知道问题的原因,我们就要解决,当然服务端可以支持TLSv1版本,这样我们就都可以请求成功,但是这并不是最好的解决方法,我们当然要让我们的App支持新的TLS协议才对。
 
 通过官方文档发现`Cipher suites`有的也是API20+支持或者默认可用,所以我们如果想支持TLSv1.x版本,可能需要给低版本添加`Cipher suites`,所以我们需要自定义SSLSocketFactory,自定义的SSLSocketFactory如下:
 ```java
