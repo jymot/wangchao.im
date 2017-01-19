@@ -1,5 +1,5 @@
 ---
-title: 配置Https证书
+title: Https证书配置
 date: 2017-01-19 08:18:35
 categories: [Web]
 tags: [Web, Https]
@@ -26,6 +26,9 @@ curl  https://get.acme.sh | sh
 ```
 mkdir -p /www/acme-challenges
 ```
+
+<!--more-->
+
 因为[Let's Encrypt]在验证时候,会访问下URL`http://wangchao.im//.well-known/acme-challenge`(wangchao.im为我的域名,后面配置中如果您要使用请替换为您的域名)进行验证,所以我们要配置`nginx`(因为我使用的是nginx,所以这里仅说一下nginx)使该URL代理我们刚才创建的目录,配置如下:
 ```
 server {
