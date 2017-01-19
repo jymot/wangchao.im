@@ -3,9 +3,15 @@
   <title><![CDATA[M.O.T]]></title>
   <subtitle><![CDATA[Magician.of.Technique]]></subtitle>
   <link href="/atom.xml" rel="self"/>
+<<<<<<< HEAD
+  <link href="http://yoursite.com/"/>
+  <updated>2016-05-06T07:59:06.102Z</updated>
+  <id>http://yoursite.com/</id>
+=======
   <link href="http://wangchao.im/"/>
   <updated>2016-09-13T00:25:33.000Z</updated>
   <id>http://wangchao.im/</id>
+>>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
   
   <author>
     <name><![CDATA[Wang Chao]]></name>
@@ -15,12 +21,79 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+<<<<<<< HEAD
+    <title><![CDATA[多平台使用字体图标]]></title>
+    <link href="http://yoursite.com/2016/05/06/font-icon-about/"/>
+    <id>http://yoursite.com/2016/05/06/font-icon-about/</id>
+    <published>2016-05-06T05:40:41.000Z</published>
+    <updated>2016-05-06T07:59:06.102Z</updated>
+    <content type="html"><![CDATA[<p>最近比较流行字体图标，下面说一下分别在HTML、Android和iOS中怎么使用字体图标。</p>
+<h3 id="u4E00_u3001HTML"><a href="#u4E00_u3001HTML" class="headerlink" title="一、HTML"></a>一、HTML</h3><h4 id="u5177_u4F53_u6B65_u9AA4"><a href="#u5177_u4F53_u6B65_u9AA4" class="headerlink" title="具体步骤"></a>具体步骤</h4><p>1.font-face声明字体<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="at_rule">@<span class="keyword">font-face</span></span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">font-family</span>:<span class="value"> <span class="string">'iconfont'</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">src</span>:<span class="value"> <span class="function">url</span>(<span class="string">'iconfont.eot'</span>)</span></span>; <span class="comment">/* IE9*/</span></span><br><span class="line">    <span class="rule"><span class="attribute">src</span>:<span class="value"> <span class="function">url</span>(<span class="string">'iconfont.eot?#iefix'</span>) <span class="function">format</span>(<span class="string">'embedded-opentype'</span>), <span class="comment">/* IE6-IE8 */</span></span><br><span class="line">    <span class="function">url</span>(<span class="string">'iconfont.woff'</span>) <span class="function">format</span>(<span class="string">'woff'</span>), <span class="comment">/* chrome、firefox */</span></span><br><span class="line">    <span class="function">url</span>(<span class="string">'iconfont.ttf'</span>) <span class="function">format</span>(<span class="string">'truetype'</span>), <span class="comment">/* chrome、firefox、opera、Safari, Android, iOS 4.2+*/</span></span><br><span class="line">    <span class="function">url</span>(<span class="string">'iconfont.svg#iconfont'</span>) <span class="function">format</span>(<span class="string">'svg'</span>)</span></span>; <span class="comment">/* iOS 4.1- */</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>2.定义使用iconfont的样式<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.iconfont</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">font-family</span>:<span class="value"><span class="string">"iconfont"</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">16px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">font-style</span>:<span class="value">normal</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>3.挑选相应图标并获取字体编码，应用于页面<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;i class="iconfont"&gt;&amp;#33&lt;/i&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="u5E38_u89C1_u95EE_u9898"><a href="#u5E38_u89C1_u95EE_u9898" class="headerlink" title="常见问题"></a>常见问题</h4><p>1.字体图标在safair或chrome浏览器下被加粗？<br>由于字体图标存在半个像素的锯齿，在浏览器渲染的时候直接显示一个像素了，导致在有背景下的图标显示感觉加粗；所以在应用字体图标的时候需要对图标样式进行抗锯齿处理，CSS代码设置如下：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.iconfont</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">-webkit-font-smoothing</span>:<span class="value"> antialiased</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>2.字体图标在IE7浏览器显示中图标右侧出现小方框现象？<br>可以对引用字体图标的非块标签进行以下CSS定义:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">display</span>: <span class="tag">block</span>;</span><br></pre></td></tr></table></figure></p>
+<p>3.字体图标在pc端的chrome浏览器下出现严重的锯齿？<br>可以对字体图标的边缘进行模糊；（只支持webkit内核浏览器,参数数值不宜设置得很大，这会带来图标加粗的问题）<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">-webkit-text-stroke-width</span>: 0<span class="class">.2px</span>;</span><br></pre></td></tr></table></figure></p>
+<h3 id="u4E8C_u3001Android"><a href="#u4E8C_u3001Android" class="headerlink" title="二、Android"></a>二、Android</h3><h4 id="u5177_u4F53_u6B65_u9AA4-1"><a href="#u5177_u4F53_u6B65_u9AA4-1" class="headerlink" title="具体步骤"></a>具体步骤</h4><p>1.复制字体文件到项目 assets 目录；<br>2.打开 iconfont 目录中的 demo.html，找到图标相对应的 HTML 实体字符码；<br>3.打开 res/values/strings.xml，添加 string 值；<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">string</span> <span class="attribute">name</span>=<span class="value">"icons"</span>&gt;</span>&amp;#x3605; &amp;#x35ad; &amp;#x35ae; &amp;#x35af;<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>4.添加 string 值到 TextView：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">TextView</span></span><br><span class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/iconfont"</span></span><br><span class="line">    <span class="attribute">android:layout_width</span>=<span class="value">"wrap_content"</span></span><br><span class="line">    <span class="attribute">android:layout_height</span>=<span class="value">"wrap_content"</span></span><br><span class="line">    <span class="attribute">android:text</span>=<span class="value">"@string/icons"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>5.为 TextView 设置字体<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Typeface iconfont = Typeface.createFromAsset(getAssets(), <span class="string">"iconfont/iconfont.ttf"</span>);</span><br><span class="line">TextView textview = (TextView)findViewById(R.id.like);</span><br><span class="line">textview.setTypeface(iconfont);</span><br></pre></td></tr></table></figure></p>
+<h3 id="u4E09_u3001iOS"><a href="#u4E09_u3001iOS" class="headerlink" title="三、iOS"></a>三、iOS</h3><h4 id="u5177_u4F53_u6B65_u9AA4-2"><a href="#u5177_u4F53_u6B65_u9AA4-2" class="headerlink" title="具体步骤"></a>具体步骤</h4><p>1.将您IconFont刚下载的字体文件(.ttf)添加到工程中<br>2.打开Info.plist文件，增加一个新的Array类型的键，键名设置为UIAppFonts（Fonts provided by application），增加字体的文件名：“iconfont.ttf“<br>3.使用IconFont字体:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">UILabel * label = [[UILabel alloc] initWithFrame:self.view.bounds];</span><br><span class="line">UIFont *iconfont = [UIFont fontWithName:@<span class="string">"uxIconFont"</span> size: <span class="number">34</span>];</span><br><span class="line">label.font = iconfont;</span><br><span class="line">label.text = @<span class="string">"\U00003439 \U000035ad \U000035ae \U000035af \U000035eb \U000035ec"</span>;</span><br><span class="line">[self.view addSubview: label];</span><br></pre></td></tr></table></figure></p>
+<h4 id="u6CE8_u610F"><a href="#u6CE8_u610F" class="headerlink" title="注意"></a>注意</h4><p>创建 UIFont 使用的是字体名，而不是文件名；<br>文本值为 8 位的 Unicode 字符，我们可以打开 demo.html 查找每个图标所对应的 HTML 实体 Unicode 码，比如：<br>“店” 对应的 HTML 实体 Unicode 码为：<br>0x3439<br>转换后为<br>\U00003439<br>就是将 0x 替换为 \U 中间用 0 填补满长度为 8 个字符</p>
+<h3 id="u56DB_u3001_u56FE_u6807_u5236_u4F5C"><a href="#u56DB_u3001_u56FE_u6807_u5236_u4F5C" class="headerlink" title="四、图标制作"></a>四、图标制作</h3><p><a href="http://iconfont.cn/help/iconmake.html" target="_blank" rel="external">link</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近比较流行字体图标，下面说一下分别在HTML、Android和iOS中怎么使用字体图标。</p>
+<h3 id="u4E00_u3001HTML"><a href="#u4E00_u3001HTML" class="headerlink" title="一、HTML"><]]>
+    </summary>
+    
+      <category term="字体图标" scheme="http://yoursite.com/tags/%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87/"/>
+    
+      <category term="Client" scheme="http://yoursite.com/categories/Client/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android插件化相关知识点]]></title>
+    <link href="http://yoursite.com/2016/05/04/android-plugin-arrangement/"/>
+    <id>http://yoursite.com/2016/05/04/android-plugin-arrangement/</id>
+    <published>2016-05-04T00:36:43.000Z</published>
+    <updated>2016-05-06T07:59:06.102Z</updated>
+    <content type="html"><![CDATA[<p>关于Android插件化开发涉及到的一些知识点汇总：</p>
+<h3 id="u57FA_u7840"><a href="#u57FA_u7840" class="headerlink" title="基础"></a>基础</h3><p>1.<a href="https://www.ibm.com/developerworks/cn/java/j-lo-classloader/" target="_blank" rel="external">Java 类加载器</a><br>2.<a href="https://github.com/JustinSDK/JavaSE6Tutorial/blob/master/docs/CH16.md" target="_blank" rel="external">反射原理</a><br>3.<a href="http://www.jianshu.com/p/6f6bb2f0ece9" target="_blank" rel="external">代理模式及Java实现动态代理</a></p>
+<h3 id="u5165_u95E8"><a href="#u5165_u95E8" class="headerlink" title="入门"></a>入门</h3><p>1.<a href="http://104.236.134.90/2016/02/02/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E5%9F%BA%E7%A1%80/" target="_blank" rel="external">Android插件化入门</a><br>2.<a href="http://blog.csdn.net/u010687392/article/details/47121729?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">插件化开发—动态加载技术加载已安装和未安装的apk</a><br>3.<a href="https://blog.tingyun.com/web/article/detail/166" target="_blank" rel="external">Android动态加载技术三个关键问题详解</a></p>
+<h3 id="u8FDB_u9636"><a href="#u8FDB_u9636" class="headerlink" title="进阶"></a>进阶</h3><p>1.<a href="http://mp.weixin.qq.com/s?__biz=MzAwMTcwNTE0NA==&amp;mid=400217391&amp;idx=1&amp;sn=86181541ce0164156dfab135ed99bb5c&amp;scene=0&amp;key=b410d3164f5f798e61a5d4afb759fa38371c8b119384c6163a30c28163b4d4d5f59399f2400800ec842f1d0e0ffb84af&amp;ascene=0&amp;uin=MjExMjQ&amp;pass_ticket=Nt5Jaa28jjFxcQO9o%2BvQiXX%2B0iXG5DlZlHNW97Fk1Ew%3D" target="_blank" rel="external">携程Android App插件化和动态加载实践</a><br>2.<a href="http://blog.csdn.net/hkxxx/article/details/42194387" target="_blank" rel="external">动态加载APK原理分享</a><br>3.<a href="http://www.cnblogs.com/coding-way/p/4669591.html" target="_blank" rel="external">Android插件化的一种实现</a><br>4.<a href="http://mogu.io/117-117" target="_blank" rel="external">蘑菇街 App 的组件化之路</a><br>5.<a href="http://www.codekk.com/open-source-project-analysis/detail/Android/FFish/DynamicLoadApk%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">DynamicLoadApk 源码解析</a><br>6.<a href="http://blog.csdn.net/singwhatiwanna/article/details/22597587" target="_blank" rel="external">Android apk动态加载机制的研究</a><br>7.<a href="http://tech.meituan.com/mt-android-auto-split-dex.html" target="_blank" rel="external">美团Android DEX自动拆包及动态加载简介</a><br>8.<a href="http://blog.csdn.net/singwhatiwanna/article/details/23387079" target="_blank" rel="external">Android apk资源加载和activity生命周期管理</a><br>9.<a href="http://blog.csdn.net/singwhatiwanna/article/details/39937639" target="_blank" rel="external">APK动态加载框架（DL）解析</a></p>
+<h3 id="u7CFB_u5217"><a href="#u7CFB_u5217" class="headerlink" title="系列"></a>系列</h3><p>1.<a href="https://segmentfault.com/a/1190000004062866" target="_blank" rel="external">Kaedea—Android动态加载技术 简单易懂的介绍</a><br>2.<a href="https://segmentfault.com/a/1190000004062880" target="_blank" rel="external">Kaedea—Android动态加载基础 ClassLoader的工作机制</a><br>3.<a href="https://segmentfault.com/a/1190000004062899" target="_blank" rel="external">Kaedea—Android动态加载补充 加载SD卡的SO库</a><br>4.<a href="https://segmentfault.com/a/1190000004062952" target="_blank" rel="external">Kaedea—Android动态加载入门 简单加载模式</a><br>5.<a href="https://segmentfault.com/a/1190000004062972" target="_blank" rel="external">Kaedea—Android动态加载进阶 代理Activity模式</a><br>6.<a href="https://segmentfault.com/a/1190000004077469" target="_blank" rel="external">Kaedea—Android动态加载黑科技 动态创建Activity模式</a><br>7.<a href="http://blog.csdn.net/jiangwei0910410003/article/details/17679823" target="_blank" rel="external">尼古拉斯—插件开发基础篇：动态加载技术解读</a><br>8.<a href="http://blog.csdn.net/jiangwei0910410003/article/details/41384667" target="_blank" rel="external">尼古拉斯—插件开发开篇：类加载器分析</a><br>9.<a href="http://blog.csdn.net/jiangwei0910410003/article/details/47679843" target="_blank" rel="external">尼古拉斯—插件开发中篇：资源加载问题(换肤原理解析)</a><br>10.<a href="http://blog.csdn.net/jiangwei0910410003/article/details/48104455" target="_blank" rel="external">尼古拉斯—插件开发终极篇：动态加载Activity(免安装运行程序)</a><br>11.<a href="http://weishu.me/2016/01/28/understand-plugin-framework-overview/" target="_blank" rel="external">Weishu—Android插件化原理解析——概要</a><br>12.<a href="http://weishu.me/2016/01/28/understand-plugin-framework-proxy-hook/" target="_blank" rel="external">Weishu—Android插件化原理解析——Hook机制之动态代理</a><br>13.<a href="http://weishu.me/2016/02/16/understand-plugin-framework-binder-hook/" target="_blank" rel="external">Weishu—Android插件化原理解析——Hook机制之Binder Hook</a><br>14.<a href="http://weishu.me/2016/03/07/understand-plugin-framework-ams-pms-hook/" target="_blank" rel="external">Weishu—Android 插件化原理解析——Hook机制之AMS&amp;PMS</a><br>15.<a href="http://weishu.me/2016/03/21/understand-plugin-framework-activity-management/" target="_blank" rel="external">Weishu—Android 插件化原理解析——Activity生命周期管理</a><br>16.<a href="http://weishu.me/2016/04/05/understand-plugin-framework-classloader/" target="_blank" rel="external">Weishu—Android 插件化原理解析——插件加载机制</a><br>17.<a href="http://weishu.me/2016/04/12/understand-plugin-framework-receiver/" target="_blank" rel="external">Weishu—Android插件化原理解析——广播的管理</a></p>
+<h3 id="u7C7B_u5E93"><a href="#u7C7B_u5E93" class="headerlink" title="类库"></a>类库</h3><p>1.<a href="https://github.com/wequick/Small" target="_blank" rel="external">Small</a><br>2.<a href="https://github.com/limpoxe/Android-Plugin-Framework" target="_blank" rel="external">Android-Plugin-Framework</a><br>3.<a href="https://github.com/CtripMobile/DynamicAPK" target="_blank" rel="external">DynamicAPK</a><br>4.<a href="https://github.com/DroidPluginTeam/DroidPlugin" target="_blank" rel="external">DroidPlugin</a><br>5.<a href="https://github.com/houkx/android-pluginmgr" target="_blank" rel="external">android-pluginmgr</a><br>6.<a href="https://github.com/singwhatiwanna/dynamic-load-apk" target="_blank" rel="external">dynamic-load-apk</a><br>7.<a href="https://github.com/mmin18/AndroidDynamicLoader" target="_blank" rel="external">AndroidDynamicLoader</a><br>8.<a href="https://github.com/bunnyblue/ACDD/blob/master/README-Zh.md" target="_blank" rel="external">ACDD</a></p>
+<h3 id="u53C2_u8003_u89C6_u9891"><a href="#u53C2_u8003_u89C6_u9891" class="headerlink" title="参考视频"></a>参考视频</h3><p>1.<a href="http://v.youku.com/v_show/id_XNTMzMjYzMzM2.html" target="_blank" rel="external">android插件化及动态部署</a><br>阿里技术沙龙第十六期《android插件化及动态部署》视频</p>
+<p>ps: 本文转自<a href="http://www.androidblog.cn/index.php/Index/detail/id/16" target="_blank" rel="external">Android博客周刊</a>，阅读完这些博客后，我也会对每篇博客做一个总结</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>关于Android插件化开发涉及到的一些知识点汇总：</p>
+<h3 id="u57FA_u7840"><a href="#u57FA_u7840" class="headerlink" title="基础"></a>基础</h3><p>1.<a href="https:/]]>
+    </summary>
+    
+      <category term="Android Plugin" scheme="http://yoursite.com/tags/Android-Plugin/"/>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android 5.0后自定义权限注意事项]]></title>
+    <link href="http://yoursite.com/2016/05/03/android-5-0-custom-permission/"/>
+    <id>http://yoursite.com/2016/05/03/android-5-0-custom-permission/</id>
+    <published>2016-05-03T05:35:05.000Z</published>
+    <updated>2016-05-03T05:43:07.580Z</updated>
+    <content type="html"><![CDATA[<h3 id="Android_5-0__u8BF4_u660E"><a href="#Android_5-0__u8BF4_u660E" class="headerlink" title="Android 5.0 说明"></a>Android 5.0 说明</h3><p>Starting in Android 5.0, the system enforces a new uniqueness restriction on custom permissions<br>for apps that are signed with different keys. Now only one app on a device can define a given<br>custom permission (as determined by its name), unless the other app defining the permission is<br>signed with the same key. If the user tries to install an app with a duplicate custom permission<br>and is not signed with the same key as the resident app that defines the permission, the system blocks<br>the installation.</p>
+<h3 id="u89E3_u91CA"><a href="#u89E3_u91CA" class="headerlink" title="解释"></a>解释</h3><p>所以当我们在Android 5.0以及以上系统中使用自定义权限的时候，如果两个APK具有相同的签名，那么就不能使用相同命名的自定义权限。</p>
+=======
     <title><![CDATA[Android Bolts Task 从入门到放弃(二)]]></title>
     <link href="http://wangchao.im/2016/09/10/android-bolts-analyze-two/"/>
     <id>http://wangchao.im/2016/09/10/android-bolts-analyze-two/</id>
     <published>2016-09-10T01:28:10.000Z</published>
     <updated>2016-09-13T00:25:33.000Z</updated>
     <content type="html"><![CDATA[<p>上一篇<a href="http://wangchao.im/2016/09/07/android-bolts-analyze/">文章</a>关于<strong>Bolts Task</strong>的使用做了简单的说明,这次我们注意解析一下<strong>Bolts Task</strong>的源码,来看看它具体是怎么实现的。</p>
+>>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
 ]]></content>
     <summary type="html">
     <![CDATA[<p>上一篇<a href="http://wangchao.im/2016/09/07/android-bolts-analyze/">文章</a>关于<strong>Bolts Task</strong>的使用做了简单的说明,这次我们注意解析一下<strong>Bolts T]]>
@@ -35,6 +108,18 @@
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title><![CDATA[Android更新APK提示解析包时出现错误]]></title>
+    <link href="http://yoursite.com/2016/05/03/android-apk-upgrade-error/"/>
+    <id>http://yoursite.com/2016/05/03/android-apk-upgrade-error/</id>
+    <published>2016-05-03T05:21:51.000Z</published>
+    <updated>2016-05-03T05:43:07.580Z</updated>
+    <content type="html"><![CDATA[<p>今天在测试客户端升级的时候，突然发现客户端在升级的时候下载成功升级包后，安装过程中提示“解析包时出现错误”，<br>因为这个错误可能有多个问题导致，比如安装包下载不完整等。<br><a id="more"></a></p>
+<p>然后我检查了一下下载后的安装包，单独安装是可以的，所以说明包是没问题的；然后我又检查了一下对应的证书签名是否<br>一致，也是一致的，所以这个问题应该不是出在这里，然后就开始看升级这部分的代码，才发现这个问题的原因。</p>
+<p>代码中写的是将下载成功后的安装包保存到了该应用的包目录下，这里是不对的，<code>因为应用包目录只有应用本身有读取权限，
+系统安装程序是没有访问这个文件或目录的权限的。</code> 经过修改后，应该把安装包放到SD卡目录(需要判断是否有SD卡)或者<br>包资源路径。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Environment.getExternalStorageDirectory().getPath();</span><br><span class="line">context.getPackageResourcePath();</span><br></pre></td></tr></table></figure>
+=======
     <title><![CDATA[Android Bolts Task 从入门到放弃(一)]]></title>
     <link href="http://wangchao.im/2016/09/07/android-bolts-analyze/"/>
     <id>http://wangchao.im/2016/09/07/android-bolts-analyze/</id>
@@ -85,6 +170,7 @@
 <p>当然还有就是,我们如果自己创建一个Task怎么做呢:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">TaskCompletionSource&lt;Object&gt; tcs = <span class="keyword">new</span> TaskCompletionSource&lt;&gt;();</div><div class="line"><span class="comment">//tcs.setResult(null);</span></div><div class="line"><span class="comment">//tcs.setError(new Exception());</span></div><div class="line"><span class="comment">//tcs.setCancelled();</span></div><div class="line"></div><div class="line">tcs.getTask();</div></pre></td></tr></table></figure></p>
 <p>我们可以实例一个<strong>TaskCompletionSource<tresult></tresult></strong>对象(注意该对象为bolts.TaskCompletionSource<tresult>),如果我们需要一个成功的Task,那么调用<strong>setResult()</strong>方法并传入一个Result,如果需要一个异常Task,那么调用<strong>setError()</strong>方法并传入一个异常,如果需要一个已经取消的Task,那么调用<strong>setCancelled()</strong>方法即可。</tresult></p>
 <h3 id="3-_u6700_u540E"><a href="#3-_u6700_u540E" class="headerlink" title="3.最后"></a>3.最后</h3><p>关于<strong>Bolts Task</strong>的用法就先写到这,后面会在写一篇关于<strong>Bolts Task</strong>的源码分析,希望能给初学者带来一些帮助。</p>
+>>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
 ]]></content>
     <summary type="html">
     <![CDATA[<p>最近好多人都问我<a href="https://github.com/BoltsFramework/Bolts-Android">Bolts-Android</a>的一些问题,其中主要都是关于<strong>Bolts Task</strong>的,所以先把我对<a href="https://github.com/BoltsFramework/Bolts-Android">Bolts-Android</a>中Task的使用和分析分享一下,希望对后来人有所帮助。</p>
@@ -102,6 +188,15 @@
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title><![CDATA[xcode7中NSURLSession发送HTTP异常]]></title>
+    <link href="http://yoursite.com/2016/02/23/xcode7-nsurlsession-send-http/"/>
+    <id>http://yoursite.com/2016/02/23/xcode7-nsurlsession-send-http/</id>
+    <published>2016-02-23T08:52:17.000Z</published>
+    <updated>2016-02-23T09:02:33.763Z</updated>
+    <content type="html"><![CDATA[<p>今天在使用NSURLSession时候报了如下的错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Application Transport Security has blocked a cleartext HTTP (http://) resource load since it is insecure. Temporary exceptions can be configured via your app&#39;s Info.plist file.</span><br></pre></td></tr></table></figure></p>
+<p>解决办法如下为在info.plist文件中添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;key&#62;NSAppTransportSecurity&#60;/key&#62;&#10;    &#60;dict&#62;&#10;        &#60;key&#62;NSAllowsArbitraryLoads&#60;/key&#62;&#10;        &#60;true/&#62;&#10;    &#60;/dict&#62;</span><br></pre></td></tr></table></figure></p>
+=======
     <title><![CDATA[Android 反编译工具]]></title>
     <link href="http://wangchao.im/2016/08/09/android-decompiler/"/>
     <id>http://wangchao.im/2016/08/09/android-decompiler/</id>
@@ -115,6 +210,7 @@
 <h4 id="4-JD-GUI"><a href="#4-JD-GUI" class="headerlink" title="4.JD-GUI"></a>4.<a href="https://github.com/java-decompiler/jd-gui" target="_blank" rel="external">JD-GUI</a></h4><p>java反编译GUI。</p>
 <h4 id="4-smali/baksmali"><a href="#4-smali/baksmali" class="headerlink" title="4.smali/baksmali"></a>4.<a href="https://github.com/JesusFreke/smali" target="_blank" rel="external">smali/baksmali</a></h4><p>分别是smali文件转为dex和dex转smali的工具。<br>example:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">java -jar smali.jar classout/ -o classes.dex</div><div class="line">java -jar baksmali.jar -o classout/ classes.dex</div></pre></td></tr></table></figure></p>
 <h4 id="5-AXMLPrinter2"><a href="#5-AXMLPrinter2" class="headerlink" title="5.AXMLPrinter2"></a>5.<a href="http://code.google.com/p/android4me/downloads/list" target="_blank" rel="external">AXMLPrinter2</a></h4><p>xml文件转成普通文本文件(txt)。<br>example:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -jar AXMLPrinter2.jar main.xml &gt; main.txt</div></pre></td></tr></table></figure></p>
+>>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
 ]]></content>
     <summary type="html">
     <![CDATA[<p>整理一些关于Android反编译相关的工具，点击标题查阅官方详细说明。</p>
@@ -133,6 +229,24 @@
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title><![CDATA[OpenSSL之RSA]]></title>
+    <link href="http://yoursite.com/2016/01/21/openssl-rsa-20160121/"/>
+    <id>http://yoursite.com/2016/01/21/openssl-rsa-20160121/</id>
+    <published>2016-01-21T14:02:22.000Z</published>
+    <updated>2016-01-21T14:32:53.179Z</updated>
+    <content type="html"><![CDATA[<p>OpenSSL集成了众多密码算法，今天主要说下RSA非对称加解密以及在Android中的使用。<br>那么我们需要先了解一下OpenSSL关于RSA的相关命令使用方法<br><a id="more"></a></p>
+<h3 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h3><h4 id="1-_u751F_u6210_u79C1_u94A5"><a href="#1-_u751F_u6210_u79C1_u94A5" class="headerlink" title="1.生成私钥"></a>1.生成私钥</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl genrsa -out private.pem <span class="number">1024</span></span><br></pre></td></tr></table></figure>
+<p>如上所示，我们即生成了名为private.pem的私钥文件，密钥长度1024，密钥长度范围在512～2024之间</p>
+<h4 id="2-_u751F_u6210_u516C_u94A5"><a href="#2-_u751F_u6210_u516C_u94A5" class="headerlink" title="2.生成公钥"></a>2.生成公钥</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl rsa -in private.pem -pubout -out public.pem</span><br></pre></td></tr></table></figure>
+<p>所以我们就生成了公钥文件</p>
+<h4 id="3-_u516C_u94A5_u52A0_u5BC6"><a href="#3-_u516C_u94A5_u52A0_u5BC6" class="headerlink" title="3.公钥加密"></a>3.公钥加密</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl rsautl -encrypt -in fileName -inkey public.pem -pubin -out fileName.en</span><br></pre></td></tr></table></figure>
+<p>如上所示，我们用公钥对fileName文件进行了加密得到fileName.en文件</p>
+<h4 id="4-_u79C1_u94A5_u89E3_u5BC6"><a href="#4-_u79C1_u94A5_u89E3_u5BC6" class="headerlink" title="4.私钥解密"></a>4.私钥解密</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl rsautl -decrypt -in fileName.en -inkey private.key -out fileName.de</span><br></pre></td></tr></table></figure>
+<p>我们用私钥对fileName.en文件解密得到fileName.de文件</p>
+<h3 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h3><p>说到这里，对于RSA的基本操作就结束了，但是我们一般生成密钥对后，我们需要在我们的代码中使用，这里以Android<br>为例，但是我们在代码中不能直接使用之前生成的私钥，需要对密钥进行PKCS#8编码，执行如下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl pkcs8 -topk8 -in private.pem -out private_android.pem -nocrypt</span><br></pre></td></tr></table></figure></p>
+<p>我们得到的private_android.pem就可以在代码中使用了</p>
+=======
     <title><![CDATA[Android逆向开发之Smali]]></title>
     <link href="http://wangchao.im/2016/08/04/android-smali-develop/"/>
     <id>http://wangchao.im/2016/08/04/android-smali-develop/</id>
@@ -162,6 +276,7 @@
 <figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">.line</span> xx</div><div class="line">  <span class="built_in"> const-string </span>v0, <span class="string">"Hello, Smali"</span></div><div class="line"></div><div class="line">  <span class="built_in"> const/4 </span>v1, 0x1</div><div class="line"></div><div class="line">  <span class="built_in"> invoke-static </span>&#123;p0, v0, v1&#125;, <span class="class">Landroid/widget/Toast;</span>-&gt;makeText(<span class="class">Landroid/content/Context;</span><span class="class">Ljava/lang/CharSequence;</span>I)<span class="class">Landroid/widget/Toast;</span></div><div class="line"></div><div class="line">  <span class="built_in"> move-result-object </span>v0</div><div class="line"></div><div class="line">  <span class="built_in"> invoke-virtual </span>&#123;v0&#125;, <span class="class">Landroid/widget/Toast;</span>-&gt;show()V</div></pre></td></tr></table></figure>
 <p>下面的smali就是对应上面Toast的翻译，所以我们把下面这几行代码注入带onCreate中即可，需要注意的是，行号是不能重复的所以将xx替换为任意不重复的行数，还有就是.locals，因为上面的代码用到了v1，所以我们的.locals寄存器数量至少为2，修改成功后，我们就可以重新编译APK并对其进行签名，然后就可以看到在启动测试程序的工程中出现了我们刚才加入的Toast，注入成功了。</p>
 <h3 id="u76F8_u5173_u6587_u7AE0"><a href="#u76F8_u5173_u6587_u7AE0" class="headerlink" title="相关文章"></a>相关文章</h3><p><a href="http://blog.csdn.net/wdaming1986/article/details/8299996" target="_blank" rel="external">Android Smali语言学习</a></p>
+>>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
 ]]></content>
     <summary type="html">
     <![CDATA[<h3 id="u4E86_u89E3"><a href="#u4E86_u89E3" class="headerlink" title="了解"></a>了解</h3><p>最近在研究一些关于Android二次开发的事情，也就是反编译APK后，然后注入一些我们需要的代码（比如广告），然后在重新签名生成新的APK包。我们都知道可以通过<a href="http://wangchao.im/2016/01/20/android-secondary-build/">APKTool反编译APK</a>，反编译成功后的目录结构如下：</p>]]>
@@ -177,6 +292,24 @@
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title><![CDATA[Android二次打包]]></title>
+    <link href="http://yoursite.com/2016/01/20/android-secondary-build/"/>
+    <id>http://yoursite.com/2016/01/20/android-secondary-build/</id>
+    <published>2016-01-20T13:51:02.000Z</published>
+    <updated>2016-01-21T00:16:13.531Z</updated>
+    <content type="html"><![CDATA[<p>关于Android二次打包，有的是为了更换证书，有的是为了修改资源，有的是为了注入广告，不管处于什么样的目的，都希望<br>用于正当渠道。废话不多说，直接进入正题。</p>
+<a id="more"></a>
+<h4 id="1-_u51C6_u5907_u5DE5_u4F5C"><a href="#1-_u51C6_u5907_u5DE5_u4F5C" class="headerlink" title="1.准备工作"></a>1.准备工作</h4><p>我们需要下载<a href="https://github.com/iBotPeaches/Apktool" target="_blank" rel="external">ApkTool</a>工具（关于该工具的下载和安装在官网都有详细的步骤，在这里就不多说了），然后确保keytool和<br>jarsigner命令是可用的。</p>
+<h4 id="2-_u53CD_u7F16_u8BD1"><a href="#2-_u53CD_u7F16_u8BD1" class="headerlink" title="2.反编译"></a>2.反编译</h4><p>我们使用ApkTool进行反编译APK，执行如下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apktool d -o app app.apk</span><br></pre></td></tr></table></figure></p>
+<p>就会将反编译结果放到app目录下，然后就可以修改反编译后的app目录中的内容，比如图片或代码</p>
+<h4 id="3-_u7F16_u8BD1"><a href="#3-_u7F16_u8BD1" class="headerlink" title="3.编译"></a>3.编译</h4><p>接下来执行如下命令，将修改后的目录重新打包为APK<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apktool b -o app_fix.apk app</span><br></pre></td></tr></table></figure></p>
+<p>这样我们就生成了新的修改后的app_fix.apk</p>
+<h4 id="4-_u751F_u6210keystore"><a href="#4-_u751F_u6210keystore" class="headerlink" title="4.生成keystore"></a>4.生成keystore</h4><p>使用keytool命令生成keystore，具体如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkeypair -alias <span class="built_in">test</span> -keyalg RSA -validity <span class="number">20000</span> -keystore test.keystore</span><br></pre></td></tr></table></figure></p>
+<p>然后会提示我们录入密钥口令，还有输入一些信息，根据提示填写即可，执行结束后就会生成一个别名为<code>test</code>的<code>test.keystore</code></p>
+<h4 id="5-_u7B7E_u540D"><a href="#5-_u7B7E_u540D" class="headerlink" title="5.签名"></a>5.签名</h4><p>用我们刚才生成的<code>test.keystore</code>给<code>app_fix.apk</code>签名，执行如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jarsigner -verbose -keystore test.keystore -signedjar app_signed.apk app_fix.apk <span class="built_in">test</span></span><br></pre></td></tr></table></figure></p>
+<p>执行后需要录入keystore的口令，最后就会生成签名后的APK<code>app_signed.apk</code></p>
+=======
     <title><![CDATA[Android NDK - Type Signatures]]></title>
     <link href="http://wangchao.im/2016/08/02/android-ndk-one/"/>
     <id>http://wangchao.im/2016/08/02/android-ndk-one/</id>
@@ -286,6 +419,7 @@
 </tr>
 </tbody>
 </table>
+>>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
 ]]></content>
     <summary type="html">
     <![CDATA[<h3 id="1-The_JNI_uses_the_Java_VM_u2019s_representation_of_type_signatures"><a href="#1-The_JNI_uses_the_Java_VM_u2019s_representation_of_type_signatures" class="headerlink" title="1.The JNI uses the Java VM’s representation of type signatures."></a>1.The JNI uses the Java VM’s representation of type signatures.</h3>]]>
@@ -301,12 +435,21 @@
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title><![CDATA[ApkTool反编译报错]]></title>
+    <link href="http://yoursite.com/2016/01/20/android-apktool-error/"/>
+    <id>http://yoursite.com/2016/01/20/android-apktool-error/</id>
+    <published>2016-01-20T11:59:19.000Z</published>
+    <updated>2016-01-20T14:22:58.258Z</updated>
+    <content type="html"><![CDATA[<p>今天需要使用ApkTool反编译APK，因为好久没用了，所以就去github上面下载最新的版本<a href="https://github.com/iBotPeaches/Apktool" target="_blank" rel="external">ApkTool</a><br>然后替换对应的jar和bash脚本</p>
+=======
     <title><![CDATA[Android混淆指令]]></title>
     <link href="http://wangchao.im/2016/07/29/android-proguard-about/"/>
     <id>http://wangchao.im/2016/07/29/android-proguard-about/</id>
     <published>2016-07-29T00:32:32.000Z</published>
     <updated>2016-08-11T00:55:05.000Z</updated>
     <content type="html"><![CDATA[<p>在Android打包过程中，混淆dex是不可或缺的，下面简单介绍几个应用在混淆文件中的指令。</p>
+>>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
 <a id="more"></a>
 <ul>
 <li>-optimizationpasses<br>代码混淆的压缩比例,值在0-7之间</li>
@@ -338,6 +481,20 @@
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title><![CDATA[Android安全之完整性校验]]></title>
+    <link href="http://yoursite.com/2016/01/17/android-security/"/>
+    <id>http://yoursite.com/2016/01/17/android-security/</id>
+    <published>2016-01-17T00:14:19.000Z</published>
+    <updated>2016-01-21T00:16:13.531Z</updated>
+    <content type="html"><![CDATA[<p>最近在研究Android安全应用加固相关的技术，今天我先简单说下APK的完整性校验，首先我们先看一下一般APK里面的构造，下图为直接解压APK的目录结构：<br><a id="more"></a><br><img src="/images/android-integrity-01-20160120.png" alt="目录结构"><br>我们可以看到META-INF目录里面的MANIFEST.MF清单文件，里面记录了所有文件的SHA-1，<br>所以我们当我们APK包中资源或dex有改变时候，或者二次打包（关于二次打包可以看我另外一篇文章<br><a href="/2016/01/20/android-secondary-build/">Android二次打包</a>）的时候，<br>该清单文件都会改变，所以我们就可以校验这个文件来确保APK的完整性，中心思想说完了那么我们下面说一下具体实现。</p>
+<p>首先，我们需要获取到META-INF目录，我们知道安装一个APK后，会在存放在手机如下目录<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/data/app/im.xxx.app-<span class="number">1</span>.apk</span><br></pre></td></tr></table></figure></p>
+<p>在代码中我们可以使用<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">context.getPackageCodePath();</span><br></pre></td></tr></table></figure></p>
+<p>获取该文件路径，因为/data/app目录是只读的，所以我们需要把该APK拷贝出来，比如拷贝到包目录下的<br>files或caches目录，然后我们把拷贝出来的APK解压到临时目录，我们这是就可以找到其对应的META-INF<br>目录，接下来我们需要做的就是校验清单文件，到这里，我们可以计算出当前运行APK清单文件的摘要，所以我们<br>只需要和我们打包时候清单文件摘要进行对比，即可得出当前APK是否被篡改，如果不相等即被篡改。那么打包时候<br>计算的摘要要放到那里呢，当然是META-INF目录里面，我在打包结束的时候，在META-INF中创建了一个文件，<br>文件名字为<code>SPECIAL-清单的md5</code>，所以我们在校验的时候，需要判断META-INF目录中以<code>SPECIAL-</code>开头的<br>文件是否存在，并且截取后面的摘要值和META-INF目录中MANIFEST.MF计算的摘要进行对比，部分实现代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">final</span> <span class="keyword">private</span> Runnable r = <span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">        <span class="annotation">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="comment">//savePath = context.getFilesDir().getPath();</span></span><br><span class="line">            String copyPath = savePath.concat(<span class="string">"/copyApp.apk"</span>);</span><br><span class="line">            <span class="comment">//copy apk</span></span><br><span class="line">            FileUtils.copyFile(codePath, copyPath);</span><br><span class="line"></span><br><span class="line">            File copyApp = <span class="keyword">new</span> File(copyPath);</span><br><span class="line">            String renamePath = savePath.concat(<span class="string">"/copyApp.zip"</span>);</span><br><span class="line">            File renameApp = <span class="keyword">new</span> File(renamePath);</span><br><span class="line">            <span class="keyword">boolean</span> result = copyApp.renameTo(renameApp);</span><br><span class="line">            <span class="keyword">if</span> (result)&#123;</span><br><span class="line">                String decompressPath = savePath.concat(<span class="string">"/temp"</span> + System.currentTimeMillis());</span><br><span class="line">                <span class="comment">//decompress</span></span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    FileUtils.decompressZip(renameApp, decompressPath);</span><br><span class="line">                    FileUtils.deleteFile(renameApp);</span><br><span class="line"></span><br><span class="line">                    File meta_inf = <span class="keyword">new</span> File(decompressPath + <span class="string">"/META-INF"</span>);</span><br><span class="line">                    File[] metaFileArray = meta_inf.listFiles();</span><br><span class="line">                    String checkEncryptDigest = <span class="keyword">null</span>;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; metaFileArray.length; i++)&#123;</span><br><span class="line">                        <span class="keyword">final</span> String fileName = metaFileArray[i].getName();</span><br><span class="line">                        <span class="keyword">if</span> (fileName.startsWith(<span class="string">"SPECIAL-"</span>))&#123;</span><br><span class="line">                            checkEncryptDigest = fileName.substring(<span class="number">8</span>);</span><br><span class="line">                        &#125;</span><br><span class="line">                        Log.e(TAG, <span class="string">"fileName : "</span> + fileName);</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span> (TextUtils.isEmpty(checkEncryptDigest))&#123;</span><br><span class="line">                        Log.e(TAG, <span class="string">"non integrity! file is not exists"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    File manifest_mf = <span class="keyword">new</span> File(decompressPath + <span class="string">"/META-INF/MANIFEST.MF"</span>);</span><br><span class="line">                    String digest = DigestUtils.md5(manifest_mf);</span><br><span class="line">                    <span class="keyword">if</span> (TextUtils.isEmpty(digest))&#123;</span><br><span class="line">                        Log.e(TAG, <span class="string">"original digest is null"</span>);</span><br><span class="line">                        <span class="keyword">return</span>;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="comment">//todo 解密 checkEncryptDigest 得到摘要和 digest 进行比较</span></span><br><span class="line">                    String checkDigest = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span> (digest.equals(checkDigest))&#123;</span><br><span class="line">                        Log.e(TAG, <span class="string">"apk is integrity!"</span>);</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        Log.e(TAG, <span class="string">"non integrity!"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure></p>
+<p>所以，我们可以知道当前APK是否被篡改，以上为部分代码，里面涉及到了<code>FileUtils</code>和<code>DigestUtils</code>类，还有未对md5加密，所以最后创建在<br>META-INF中的文件应该是<code>SPECIAL-加密后的md5，并做Base64编码</code>，然后我们在代码里面解密后在进行校验（如果不加密，那么黑客在二次打包时候，<br>很容易知道这个文件是干什么的，所以可以自己生成一个二次打包后的校验文件，所以我们需要进行加密，这样就算知道文件的作用但是没有我们的密钥也无法<br>模拟创建校验文件）。后面整理完后，我会把工程整理好放到Github上。</p>
+<p>有些同学会问，如何在打好的APK的META-INF中创建文件，下面贴出脚本：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#! /usr/bin/python</span></span><br><span class="line"><span class="keyword">import</span> zipfile</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"></span><br><span class="line">src_empty_file = <span class="string">"empty"</span></span><br><span class="line">src_apk = sys.argv[<span class="number">1</span>]</span><br><span class="line">shutil.copy(src_apk,channel_apk)</span><br><span class="line"></span><br><span class="line">zipped = zipfile.ZipFile(channel_apk, <span class="string">'a'</span>, zipfile.ZIP_DEFLATED)</span><br><span class="line">special_md5 = <span class="string">"META-INF/SPECIAL-&#123;md5&#125;"</span>.format(md5 = sys.argv[<span class="number">2</span>])</span><br><span class="line">zipped.write(src_empty_file, special_md5)</span><br><span class="line">zipped.close()</span><br></pre></td></tr></table></figure></p>
+<p>所以调用时候传入两个参数，第一个为需要修改的APK路径，第二个参数为清单文件的MD5。</p>
+=======
     <title><![CDATA[Android Library 混淆]]></title>
     <link href="http://wangchao.im/2016/07/13/android-library-auto-proguard/"/>
     <id>http://wangchao.im/2016/07/13/android-library-auto-proguard/</id>
@@ -350,6 +507,7 @@
 </ul>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">defaultConfig &#123;</div><div class="line">    consumerProguardFiles <span class="string">'proguard-rules.txt'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>如上所示，<em>proguard-rules.txt</em>为Library库中混淆文件的文件名。<br>需要注意的是，混淆文件中不支持如下指令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-injars, -outjars, -libraryjars, -printmapping</div></pre></td></tr></table></figure></p>
+>>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
 ]]></content>
     <summary type="html">
     <![CDATA[<p>我们使用或者自己创建Library库的时候，难免会增加一些混淆规则。但是这些规则需要手动增加到引用这个Library库主工程混淆文件中，非常的不方便。今天无意中发现一个自动讲Library库中的混淆规则加入到主工程混淆文件的方法，具体如下：<br>]]>
@@ -365,6 +523,14 @@
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title><![CDATA[TextView支持的HTML标签]]></title>
+    <link href="http://yoursite.com/2016/01/12/textview-html-tags/"/>
+    <id>http://yoursite.com/2016/01/12/textview-html-tags/</id>
+    <published>2016-01-12T05:39:26.000Z</published>
+    <updated>2016-01-12T05:49:33.044Z</updated>
+    <content type="html"><![CDATA[<p>Android中TextView并不支持所有的HTML标签，如果需要更为复杂的操作最好使用WebView，<br>今天再网上看到TextView支持的HTML标签的总结，记录在这里：<br><a id="more"></a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">HTML Tags Supported By TextView</span><br><span class="line">There is a lovely method on the android.text.Html class, </span><br><span class="line">fromHtml(), that converts HTML into a Spannable for use with a TextView.</span><br><span class="line"></span><br><span class="line">However, the documentation does not stipulate what HTML tags are supported, </span><br><span class="line">which makes this method a bit hit-or-miss. More importantly, it means that you</span><br><span class="line">cannot rely on what it will support from release to release.</span><br><span class="line"></span><br><span class="line">I have filed an issue requesting that Google formally document what it intends </span><br><span class="line">to support. In the interim, from a quick look at the source code, here’s what </span><br><span class="line">seems to be supported as of Android 2.1:</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"..."</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">b</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">big</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">blockquote</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">cite</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">dfn</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">align</span>=<span class="value">"..."</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">em</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">font</span> <span class="attribute">size</span>=<span class="value">"..."</span> <span class="attribute">color</span>=<span class="value">"..."</span> <span class="attribute">face</span>=<span class="value">"..."</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">h5</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">h6</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"..."</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">small</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">strike</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">strong</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">sub</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">sup</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">tt</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">u</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+=======
     <title><![CDATA[GMTC 2016-6-25]]></title>
     <link href="http://wangchao.im/2016/06/25/gmtc-25-2016/"/>
     <id>http://wangchao.im/2016/06/25/gmtc-25-2016/</id>
@@ -374,6 +540,7 @@
 <p>首先是360手机性能优化之路，全程演讲没什么干货（个人感觉），主要讲的感觉并不是面上高级开发者的，有意思的是后面的提问，一个哥们上来就问为什么360总是把我们后台的app杀死，如何才能不被杀死，当然回答也是搪塞，还有一个哥们问，360的app如果强制杀掉是会自启的，所以360是怎么做到的自唤醒，全场一片笑声，讲师也没有详细的说明。</p>
 <p>接下来就是支付宝APP的性能稳定性优化及运维实践，个人感觉讲的很好（开奖前给全场发了1888的支付宝口令红包），给我们不仅讲了一些对于app性能优化的问题，还讲述了支付宝框架的进化，从基本的框架到平台框架到超级app3.0，其中包含了动态化功能，HotPatch，还有自主研发的HCF跨平台框架，这个框架和其他跨平台框架相同，写一套代码，可以在三平台运行。不得不说支付宝的框架是先进的，首先他们在2013年就使用了插件化技术，2015年完成了HCF跨平台框架，这是让我非常佩服的。</p>
 <p>写了这么多，感觉也没写什么实在的东西，但是通过这次大会，我明确了我后面的主要方向，那就是插件化app以及跨平台框架技术相关的内容，就到这吧，洗洗睡了。</p>
+>>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
 ]]></content>
     <summary type="html">
     <![CDATA[<p>今天是2016年6月25日，大会的第二天也是最后一天，我今天参会的主要内容是手机天猫解耦之路，滴滴组件化实践与优化，微信客户端怎样应对弱网络，360手机卫士性能优化还有就是支付宝APP的性能稳定性优化及运维实践等。<br>]]>
@@ -389,6 +556,20 @@
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title><![CDATA[Git配置SSH]]></title>
+    <link href="http://yoursite.com/2016/01/11/git-ssh-config/"/>
+    <id>http://yoursite.com/2016/01/11/git-ssh-config/</id>
+    <published>2016-01-11T13:07:32.000Z</published>
+    <updated>2016-01-11T13:26:23.246Z</updated>
+    <content type="html"><![CDATA[<h4 id="1-_u8BBE_u7F6EGit_u7684_u7528_u6237_u540D_u548C_u90AE_u4EF6"><a href="#1-_u8BBE_u7F6EGit_u7684_u7528_u6237_u540D_u548C_u90AE_u4EF6" class="headerlink" title="1.设置Git的用户名和邮件"></a>1.设置Git的用户名和邮件</h4><p>执行如下命令：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &#34;UserName&#34;&#10;git config --global user.email &#34;username@xx.xx&#34;</span><br></pre></td></tr></table></figure></p>
+<p>将上面的UserName和username@xx.xx替换成你的用户名和邮件</p>
+<h4 id="2-_u751F_u6210_u5BC6_u94A5"><a href="#2-_u751F_u6210_u5BC6_u94A5" class="headerlink" title="2.生成密钥"></a>2.生成密钥</h4><p>使用ssh-keygen生成密钥，如下：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &#34;username@xx.xx&#34;</span><br></pre></td></tr></table></figure></p>
+<p>执行命令后，会提示录入密码，可忽略（如果不是第一次执行该命令，会提示是否覆盖），最后在用户目录下的.ssh目录<br>中会生成id_rsa和id_rsa.pub文件</p>
+<h4 id="3-_u5C06_u5BC6_u94A5_u6DFB_u52A0_u81F3ssh-agent"><a href="#3-_u5C06_u5BC6_u94A5_u6DFB_u52A0_u81F3ssh-agent" class="headerlink" title="3.将密钥添加至ssh-agent"></a>3.将密钥添加至ssh-agent</h4><p>我们可以将密钥添加到ssh-agent中进行管理，再添加之前，需要确保ssh-agent可用，执行如下命令：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval &#34;$(ssh-agent -s)&#34;</span><br></pre></td></tr></table></figure></p>
+<p>执行之后，会显示Agent的pid，然后我们用ssh-add将密钥添加到ssh-agent，执行如下命令：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure></p>
+<h4 id="4-_u6DFB_u52A0SSH_keys"><a href="#4-_u6DFB_u52A0SSH_keys" class="headerlink" title="4.添加SSH keys"></a>4.添加SSH keys</h4><p>在github的Settings中，找到SSh keys，点击Add SSH key，将id_rsa.pub内容添加即可。</p>
+=======
     <title><![CDATA[GMTC 2016-6-24]]></title>
     <link href="http://wangchao.im/2016/06/24/gmtc-24-2016/"/>
     <id>http://wangchao.im/2016/06/24/gmtc-24-2016/</id>
@@ -400,6 +581,7 @@
 <p>对于下午的会场，我最关注的就是React Native和Weex，这两个看起来类似的框架该如何选择，首先RN相对于Weex来说更重一些，Weex更倾向于单页面，如果使用RN的话，需要做减法，但是如果选择Weex的话因为还没有完全开源，内部还是有一些坑没有填完，所以现在还不是特别好下定论。但是让我开心的是，认识了阿里的工程师，在聊天中得知阿里的所有应用将来都会像Weex迁移，而且还聊了一些关于动态化和现在阿里内部没有开源的一些技术，虽然没有聊的特别深入，但是还是收获很大的。</p>
 <p>不管是RN还是Weex，这都会是未来移动开发重要方向，尤其是对于业务频繁更新的app更为重要，接下来我将主攻RN和Weex，当然还有一些动态化的东西，要记住为app选择框架，并非选择最好的，而是选择最适合的。</p>
 <p>好了，不说了，说了这么多有的没得其实让我感触最深的是，技术在不断的进步，如果你还停留在原地，那只能是被淘汰的。</p>
+>>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
 ]]></content>
     <summary type="html">
     <![CDATA[<p>今天是2016年6月24日，起了个大早，去参加了GMTC大会（全球移动技术大会），大会一共两天，今天是第一天，说说我的参会感受吧。<br>]]>
@@ -415,6 +597,17 @@
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title><![CDATA[NodeJs更新]]></title>
+    <link href="http://yoursite.com/2016/01/10/nodejs-update/"/>
+    <id>http://yoursite.com/2016/01/10/nodejs-update/</id>
+    <published>2016-01-10T04:55:44.000Z</published>
+    <updated>2016-01-10T05:03:48.070Z</updated>
+    <content type="html"><![CDATA[<h3 id="1-_u66F4_u65B0npm"><a href="#1-_u66F4_u65B0npm" class="headerlink" title="1.更新npm"></a>1.更新npm</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update -g</span><br></pre></td></tr></table></figure>
+<h3 id="2-_u66F4_u65B0nodejs"><a href="#2-_u66F4_u65B0nodejs" class="headerlink" title="2.更新nodejs"></a>2.更新nodejs</h3><h4 id="1_29_Clear_NPM_u2019s_cache_3A"><a href="#1_29_Clear_NPM_u2019s_cache_3A" class="headerlink" title="1) Clear NPM’s cache:"></a>1) Clear NPM’s cache:</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm cache clean -f</span><br></pre></td></tr></table></figure>
+<h4 id="2_29_Install_a_little_helper_called__u2018n_u2019"><a href="#2_29_Install_a_little_helper_called__u2018n_u2019" class="headerlink" title="2) Install a little helper called ‘n’"></a>2) Install a little helper called ‘n’</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g n</span><br></pre></td></tr></table></figure>
+<h4 id="3_29_Install_latest_stable_NodeJS_version"><a href="#3_29_Install_latest_stable_NodeJS_version" class="headerlink" title="3) Install latest stable NodeJS version"></a>3) Install latest stable NodeJS version</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo n stable</span><br></pre></td></tr></table></figure>]]></content>
+=======
     <title><![CDATA[多平台使用字体图标]]></title>
     <link href="http://wangchao.im/2016/05/06/font-icon-about/"/>
     <id>http://wangchao.im/2016/05/06/font-icon-about/</id>
@@ -435,6 +628,7 @@
 <h4 id="u6CE8_u610F"><a href="#u6CE8_u610F" class="headerlink" title="注意"></a>注意</h4><p>创建 UIFont 使用的是字体名，而不是文件名；<br>文本值为 8 位的 Unicode 字符，我们可以打开 demo.html 查找每个图标所对应的 HTML 实体 Unicode 码，比如：<br>“店” 对应的 HTML 实体 Unicode 码为：<br>0x3439<br>转换后为<br>\U00003439<br>就是将 0x 替换为 \U 中间用 0 填补满长度为 8 个字符</p>
 <h3 id="u56DB_u3001_u56FE_u6807_u5236_u4F5C"><a href="#u56DB_u3001_u56FE_u6807_u5236_u4F5C" class="headerlink" title="四、图标制作"></a>四、图标制作</h3><p><a href="http://iconfont.cn/help/iconmake.html" target="_blank" rel="external">link</a></p>
 ]]></content>
+>>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
     <summary type="html">
     <![CDATA[<p>最近比较流行字体图标，下面说一下分别在HTML、Android和iOS中怎么使用字体图标。</p>
 <h3 id="u4E00_u3001HTML"><a href="#u4E00_u3001HTML" class="headerlink" title="一、HTML"></a>一、HTML</h3><h4 id="u5177_u4F53_u6B65_u9AA4"><a href="#u5177_u4F53_u6B65_u9AA4" class="headerlink" title="具体步骤"></a>具体步骤</h4><p>1.font-face声明字体<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">font-face</span> &#123;</div><div class="line">    <span class="attribute">font-family</span>: <span class="string">'iconfont'</span>;</div><div class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'iconfont.eot'</span>); <span class="comment">/* IE9*/</span></div><div class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'iconfont.eot?#iefix'</span>) <span class="built_in">format</span>(<span class="string">'embedded-opentype'</span>), <span class="comment">/* IE6-IE8 */</span></div><div class="line">    <span class="built_in">url</span>(<span class="string">'iconfont.woff'</span>) <span class="built_in">format</span>(<span class="string">'woff'</span>), <span class="comment">/* chrome、firefox */</span></div><div class="line">    <span class="built_in">url</span>(<span class="string">'iconfont.ttf'</span>) <span class="built_in">format</span>(<span class="string">'truetype'</span>), <span class="comment">/* chrome、firefox、opera、Safari, Android, iOS 4.2+*/</span></div><div class="line">    <span class="built_in">url</span>(<span class="string">'iconfont.svg#iconfont'</span>) <span class="built_in">format</span>(<span class="string">'svg'</span>); <span class="comment">/* iOS 4.1- */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]>
@@ -454,6 +648,14 @@
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title><![CDATA[Linux后台运行与停止进程]]></title>
+    <link href="http://yoursite.com/2016/01/10/linux-background-run-commond/"/>
+    <id>http://yoursite.com/2016/01/10/linux-background-run-commond/</id>
+    <published>2016-01-10T03:05:47.000Z</published>
+    <updated>2016-01-10T04:25:09.176Z</updated>
+    <content type="html"><![CDATA[<p>有时候我们在Terminal中其服务时候，需要让其在关闭Terminal的情况下也可以运行，那么我们这里用到的<br>是nohup命令，执行命令如下:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup &#60;commond&#62; &#38;</span><br></pre></td></tr></table></figure></p>
+=======
     <title><![CDATA[Android插件化相关知识点]]></title>
     <link href="http://wangchao.im/2016/05/04/android-plugin-arrangement/"/>
     <id>http://wangchao.im/2016/05/04/android-plugin-arrangement/</id>
@@ -489,6 +691,7 @@
     <published>2016-05-03T05:35:05.000Z</published>
     <updated>2016-08-05T00:36:25.000Z</updated>
     <content type="html"><![CDATA[<h3 id="Android_5-0__u8BF4_u660E"><a href="#Android_5-0__u8BF4_u660E" class="headerlink" title="Android 5.0 说明"></a>Android 5.0 说明</h3><p>Starting in Android 5.0, the system enforces a new uniqueness restriction on custom permissions<br>for apps that are signed with different keys. Now only one app on a device can define a given<br>custom permission (as determined by its name), unless the other app defining the permission is </p>
+>>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
 <a id="more"></a>
 <p>signed with the same key. If the user tries to install an app with a duplicate custom permission<br>and is not signed with the same key as the resident app that defines the permission, the system blocks<br>the installation.</p>
 <h3 id="u89E3_u91CA"><a href="#u89E3_u91CA" class="headerlink" title="解释"></a>解释</h3><p>所以当我们在Android 5.0以及以上系统中使用自定义权限的时候，如果两个APK具有相同的签名，那么就不能使用相同命名的自定义权限。</p>
@@ -529,12 +732,22 @@
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title><![CDATA[linux Centos6.5 GLIBCXX和GLIBC编译错误]]></title>
+    <link href="http://yoursite.com/2016/01/10/linux-glibcxxx-glibc/"/>
+    <id>http://yoursite.com/2016/01/10/linux-glibcxxx-glibc/</id>
+    <published>2016-01-10T02:43:40.000Z</published>
+    <updated>2016-01-10T04:25:09.176Z</updated>
+    <content type="html"><![CDATA[<p>今天在编译hexo的时候，报错如下：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib64/libstdc++.so.6: version `GLIBCXX_3.4.18&#39; not found (required by clang)</span><br></pre></td></tr></table></figure></p>
+<p>这个是关于C++的库libstdc++版本过低造成的，但是我记得我已经安装到了3.4.19，所以先看下库信息，</p>
+=======
     <title><![CDATA[xcode7中NSURLSession发送HTTP异常]]></title>
     <link href="http://wangchao.im/2016/02/23/xcode7-nsurlsession-send-http/"/>
     <id>http://wangchao.im/2016/02/23/xcode7-nsurlsession-send-http/</id>
     <published>2016-02-23T08:52:17.000Z</published>
     <updated>2016-08-04T11:25:45.000Z</updated>
     <content type="html"><![CDATA[<p>今天在使用NSURLSession时候报了如下的错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Application Transport Security has blocked a cleartext HTTP (http://) </div><div class="line">resource load since it is insecure. Temporary exceptions can be configured </div><div class="line">via your app&apos;s Info.plist file.</div></pre></td></tr></table></figure></p>
+>>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
 <a id="more"></a>
 <p>解决办法如下为在info.plist文件中添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;</div><div class="line">    &lt;dict&gt;</div><div class="line">        &lt;key&gt;NSAllowsArbitraryLoads&lt;/key&gt;</div><div class="line">        &lt;true/&gt;</div><div class="line">    &lt;/dict&gt;</div></pre></td></tr></table></figure></p>
 ]]></content>
@@ -581,12 +794,21 @@
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title><![CDATA[RecyclerView嵌套使用]]></title>
+    <link href="http://yoursite.com/2016/01/09/recyclerview-nestedscrollView/"/>
+    <id>http://yoursite.com/2016/01/09/recyclerview-nestedscrollView/</id>
+    <published>2016-01-09T02:32:22.000Z</published>
+    <updated>2016-01-11T13:26:23.246Z</updated>
+    <content type="html"><![CDATA[<p>一般情况下RecyclerView是不推荐嵌套使用的，我们可以用使用不同的Type使RecyclerView达到嵌套的效果，<br>这里先不介绍这种方式。因为最近项目需要将RecyclerView嵌套在NestedScrollView中使用，下面记录一下<br>在NestedScrollView中如何使用RecyclerView。</p>
+=======
     <title><![CDATA[Android二次开发打包]]></title>
     <link href="http://wangchao.im/2016/01/20/android-secondary-build/"/>
     <id>http://wangchao.im/2016/01/20/android-secondary-build/</id>
     <published>2016-01-20T13:51:02.000Z</published>
     <updated>2016-09-23T09:53:36.000Z</updated>
     <content type="html"><![CDATA[<p>关于Android二次打包，有的是为了更换证书，有的是为了修改资源，有的是为了注入广告，不管处于什么样的目的，都希望用于正当渠道。废话不多说，直接进入正题。</p>
+>>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
 <a id="more"></a>
 <h4 id="1-_u51C6_u5907_u5DE5_u4F5C"><a href="#1-_u51C6_u5907_u5DE5_u4F5C" class="headerlink" title="1.准备工作"></a>1.准备工作</h4><p>我们需要下载<a href="https://github.com/iBotPeaches/Apktool" target="_blank" rel="external">ApkTool</a>工具（关于该工具的下载和安装在官网都有详细的步骤，在这里就不多说了），然后确保keytool和jarsigner命令是可用的。</p>
 <h4 id="2-_u53CD_u7F16_u8BD1"><a href="#2-_u53CD_u7F16_u8BD1" class="headerlink" title="2.反编译"></a>2.反编译</h4><p>我们使用ApkTool进行反编译APK，执行如下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apktool d -o app app.apk</div></pre></td></tr></table></figure></p>
@@ -612,12 +834,21 @@
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title><![CDATA[Http请求适配性封装]]></title>
+    <link href="http://yoursite.com/2016/01/09/mhttpadapter/"/>
+    <id>http://yoursite.com/2016/01/09/mhttpadapter/</id>
+    <published>2016-01-09T02:32:09.000Z</published>
+    <updated>2016-01-11T13:26:23.246Z</updated>
+    <content type="html"><![CDATA[<p>现在强大的第三方网络请求库太多了，比如OkHttp，android-async-http等，我们在用这些第三方网络请求库的时候，一般因为<br>项目需求，都会简单的做一层封装，下面我就来说我对此的理解。</p>
+=======
     <title><![CDATA[ApkTool反编译报错]]></title>
     <link href="http://wangchao.im/2016/01/20/android-apktool-error/"/>
     <id>http://wangchao.im/2016/01/20/android-apktool-error/</id>
     <published>2016-01-20T11:59:19.000Z</published>
     <updated>2016-09-23T10:02:36.000Z</updated>
     <content type="html"><![CDATA[<p>今天需要使用ApkTool反编译APK，因为好久没用了，所以就去github上面下载最新的版本<a href="https://github.com/iBotPeaches/Apktool" target="_blank" rel="external">ApkTool</a>然后替换对应的jar和bash脚本</p>
+>>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
 <a id="more"></a>
 <p>更新成功后，开始反编译APK，结果报出下面的异常<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Exception in thread <span class="string">"main"</span> brut.androlib.err.UndefinedResObject: resource spec: <span class="number">0x01010490</span></div></pre></td></tr></table></figure></p>
 <p>开始一直在研究这个异常是为什么，后来发现上面有一个提示，显示的是framework的目录里面的1.apk，这个编译异常就是因为这个文件，我们只需要把这个目录的1.apk删除即可，当我们在进行反编译时候会在生成这个apk。OS X里面存放的目录为/Users/username/Library/apktool/framework/1.apk。</p>
@@ -641,6 +872,14 @@
   </entry>
   
   <entry>
+<<<<<<< HEAD
+    <title><![CDATA[sencha-touch-chrome43]]></title>
+    <link href="http://yoursite.com/2016/01/08/sencha-touch-chrome43/"/>
+    <id>http://yoursite.com/2016/01/08/sencha-touch-chrome43/</id>
+    <published>2016-01-08T00:42:43.000Z</published>
+    <updated>2016-01-10T00:57:31.026Z</updated>
+    <content type="html"><![CDATA[<p>解决 Sencha Touch 在 Chrome 43 上面滑动问题的bug<br><img src="/images/Screen-Shot-2015-04-28-at-9.10.36-AM.png" alt="Smithsonian Image"></p>
+=======
     <title><![CDATA[Android安全之完整性校验]]></title>
     <link href="http://wangchao.im/2016/01/17/android-security/"/>
     <id>http://wangchao.im/2016/01/17/android-security/</id>
@@ -693,6 +932,7 @@
     <published>2016-01-11T13:07:32.000Z</published>
     <updated>2016-09-25T01:22:18.000Z</updated>
     <content type="html"><![CDATA[<h4 id="1-_u8BBE_u7F6EGit_u7684_u7528_u6237_u540D_u548C_u90AE_u4EF6"><a href="#1-_u8BBE_u7F6EGit_u7684_u7528_u6237_u540D_u548C_u90AE_u4EF6" class="headerlink" title="1.设置Git的用户名和邮件"></a>1.设置Git的用户名和邮件</h4><p>执行如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;UserName&quot;</div><div class="line">git config --global user.email &quot;username@xx.xx&quot;</div></pre></td></tr></table></figure></p>
+>>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
 <a id="more"></a>
 <p>将上面的UserName和username@xx.xx替换成你的用户名和邮件</p>
 <h4 id="2-_u751F_u6210_u5BC6_u94A5"><a href="#2-_u751F_u6210_u5BC6_u94A5" class="headerlink" title="2.生成密钥"></a>2.生成密钥</h4><p>使用ssh-keygen生成密钥，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;username@xx.xx&quot;</div></pre></td></tr></table></figure></p>
