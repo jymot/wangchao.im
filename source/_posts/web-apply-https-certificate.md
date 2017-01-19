@@ -125,9 +125,9 @@ acme.sh --upgrade  --auto-upgrade  0
 ```
 
 ## 参考文献
-[Let's Encrypt]
-[acme.sh]
-[acme.sh wiki]
+ - [Let's Encrypt]
+ - [acme.sh]
+ - [acme.sh wiki]
 
 
 [Let's Encrypt]: https://letsencrypt.org/
