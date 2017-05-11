@@ -36,7 +36,10 @@ tags: [Android, Android安全]
 #### 5.签名
 用我们刚才生成的`test.keystore`给`app_fix.apk`签名，执行如下：
 ```bash
+    ## jarsigner
     jarsigner -verbose -keystore test.keystore -signedjar app_signed.apk app_fix.apk test
+    ## apksigner
+    apksigner sign --ks test.keystore --out app_signed.apk test.apk 
 ```
 执行后需要录入keystore的口令，最后就会生成签名后的APK`app_signed.apk`
 
