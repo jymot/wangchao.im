@@ -25,6 +25,26 @@ mysql -uroot -p登陆密码
 SET PASSWORD FOR 'root'@'localhost' = PASSWORD('新密码');
 ```
 
+注意如果登陆不成功或者修改密码失败，需要执行如下步骤:
+```shell
+# step.1 系统偏好设置中关闭MySQL服务
+
+# step.2 
+# 进入 mysql/bin
+cd /usr/local/mysql/bin/
+# 登录管理员权限
+sudo su
+# 禁止 mysql 验证功能, 执行后 mysql 会重启
+./mysqld_safe --skip-grant-tables &
+
+# step.3 
+# 分别输入如下命令
+./mysql
+FLUSH PRIVILEGES
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('你的新密码');
+
+```
+
 ## 卸载
 完全卸载`MySQL`，执行如下命令即可：
 ```shell
