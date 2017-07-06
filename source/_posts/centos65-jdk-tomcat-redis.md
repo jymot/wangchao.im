@@ -32,6 +32,8 @@ export JAVA_HOME JRE_HOME CLASS_PATH PATH
 
 当然也可以用`yum`安装**JDK**，首先使用`yum search java | grep jdk`查看版本，然后执行`yum install java-1.8.0-openjdk`进行安装，安装完成后会在`/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.75.x86_64`目录中。
 
+<!--more-->
+
 ## 2.Tomcat
 [http://tomcat.apache.org/download-80.cgi](http://tomcat.apache.org/download-80.cgi)
 安装以及配置步骤如下（本文以tomcat-8.5.16为例）
