@@ -40,7 +40,7 @@ mysql> flush privileges;
 mysql> quit
 ```
 
-### 4.恢复登陆设置并且重启`mysqld`服务
+#### 4.恢复登陆设置并且重启`mysqld`服务
 将最开始在`/etc/my.cnf`中加的`skip-grant-tables`删除，并保存。然后重启`mysqld`服务即可。
 ```shell
 service mysqld restart
