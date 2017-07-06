@@ -22,7 +22,9 @@ mysql -uroot -p登陆密码
 ```
 登陆成功后，通过以下命令修改密码
 ```sql
-SET PASSWORD FOR 'root'@'localhost' = PASSWORD('新密码');
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('new_password');
+# 上述的 password()函数将会被抛弃，官方建议使用下面的命令来修改密码，注意新的密码规则需要包含数字大小写英文字母以及特殊富豪
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';
 ```
 
 注意如果登陆不成功或者修改密码失败，需要执行如下步骤:
