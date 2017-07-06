@@ -37,6 +37,11 @@ cat /var/log/mysqld.log | grep 'password'
 ```
 如果忘记登陆密码，可以转到这篇[文章](https://wangchao.im/2017/07/06/centos-mysql-forget-password/)
 
+最后，安装完了可以删除 MySQL 的 Repository ，这样可以减少 yum 检查更新的时间，使用下面的命令
+```shell
+yum -y remove mysql-community-release-el6-5.noarch
+```
+
 #### 基本命令
 ```shell
 # 查看系统已存在的数据库
