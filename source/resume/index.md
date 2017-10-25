@@ -3,7 +3,7 @@ title: Resume
 date: 2016-01-09 11:38:21
 ---
 ### 王超
- * 年龄:25   
+ * 年龄:27   
  * E-mail:[magician.of.technique@aliyun.com]
  * 工作经验: 4.5年
 ---
