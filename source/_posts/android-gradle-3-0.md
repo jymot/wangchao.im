@@ -16,3 +16,5 @@ Gradle 3.4引入了新的Java Library插件配置，允许您控制是否将依�
 就像Android插件的当前稳定版本一样，上述配置可用于特定于风格或构建类型的依赖关系。 例如，您可以使用implementation使所有变体的依赖关系可用，也可以使用debugImplementation使其仅适用于模块的debug变种。
 
     Note: compile, provided, and apk are currently still available. However, they will be removed in the next major release of the Android plugin.
+    
+[原文点击这里](https://developer.android.com/studio/build/gradle-plugin-3-0-0-migration.html#new_configurations)
