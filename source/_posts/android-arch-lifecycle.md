@@ -1,5 +1,5 @@
 ---
-title: Android 组件之 Lifecycle
+title: Android Architecture 组件之 Lifecycle
 date: 2017-10-28 09:13:00
 categories: [Android]
 tags: [Android]
