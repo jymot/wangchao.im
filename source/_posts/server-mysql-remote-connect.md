@@ -1,6 +1,6 @@
 ---
-title: MySQL 远程连接相关配置 [Server]
-date: 2018-12-14 11:0 [Server]7:15
+title: MySQL 远程连接相关配置
+date: 2018-12-14 11:0 7:15
 categories: Server
 tags: [Server, MySQL]
 ---
