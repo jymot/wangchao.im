@@ -15,13 +15,9 @@ if page.layout != 'tags' && page.layout != 'categories'
       - year = year == since ? year : since + '-' + year
     - copyright = '&copy;' + year
 
-    //p.power
-    //  != "Powered by "
-    //  a(href="https://hexo.io/")
-    //    != "Hexo"
-    //  != " and Theme by "
-    //  a(href="https://github.com/ahonn/hexo-theme-even")
-    //    != "Even"
+    p.power
+      a(href="http://www.beian.gov.cn/portal/index.do")
+        != "冀ICP备15026760号-1"
     p.since
       != copyright
       span.heart
