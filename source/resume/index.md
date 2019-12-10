@@ -21,7 +21,7 @@ date: 2016-01-09 11:38:21
 
 ### 主要技能
  * 主要语言: Java，JavaScript
- * 熟练掌握移动/Web前端开发
+ * 熟练掌握移动/Web前端开发，Android，iOS，小程序，H5等
  * 熟练掌握 Spring，Spring Cloud 以及相关开源框架
  * 熟练掌握 Spring，OAuth2 相关安全认证流程，以及用户权限管理系统
  * 熟练掌握 RPC 框架，以及轻量级注册中心，任务调度中心
