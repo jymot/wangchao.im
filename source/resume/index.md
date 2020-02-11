@@ -6,7 +6,7 @@ date: 2016-01-09 11:38:21
  * 年龄:27   
  * E-mail:[magician.of.technique@aliyun.com]
  * Github: [https://github.com/motcwang](https://github.com/motcwang)
- * 工作经验: 6.5年
+ * 工作经验: 7年
 ---
 
 ### 工作经历
@@ -15,16 +15,19 @@ date: 2016-01-09 11:38:21
 | 2013.03-2013.09 | 科蓝软件系统有限公司 | Android工程师 |
 | 2013.10-2017.12 | 拉卡拉支付股份有限公司 | 高级研发工程师 |
 | 2017.12-2019.3  | 桥网科技有限公司 | 架构师 |
-| 2019.4-至今 | 小窝金融信息服务有限公司 | 架构师 |
+| 2019.4-2019.12 | 小窝金融信息服务有限公司 | 架构师 |
 
 ---
 
 ### 主要技能
  * 主要语言: Java，JavaScript
- * 熟练掌握移动/Web前端开发，Android，iOS，小程序，H5等
- * 熟练掌握 Spring，Spring Cloud 以及相关开源框架
- * 熟练掌握 Spring，OAuth2 相关安全认证流程，以及用户权限管理系统
+ * 熟练掌握移动/Web前端开发，Android，iOS，小程序，H5等；移动端热更新相关技术
+ * 熟练掌握 Spring，Spring Cloud，Dubbo 以及相关开源框架
+ * 熟练掌握 Spring，OAuth2 相关安全认证流程，用户权限管理系统设计
  * 熟练掌握 RPC 框架，以及轻量级注册中心，任务调度中心
+ * 熟练掌握 Mysql 数据库, 熟悉 InnoDB 引擎；熟悉并实际应用 redis，mongodb 等非关系型数据库
+ * 熟练掌握 Docker
+ * 熟练掌握 Linux 基本操作，熟悉shell的使用
 
 ---
 
