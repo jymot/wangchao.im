@@ -64,9 +64,12 @@ server {
 acme.sh --issue -d wangchao.im -d www.wangchao.im --webroot /www/acme-challenges/ 
 ```
 通过`-d`添加多个域名,如果需要看日志可以追加`--debug`或者`--log`参数。
-证书生成成功后,会出现在`~/.acme.sh/wangchao.im/`目录下,我们可以把它们复制出来,比如我复制到了`/etc/nginx/ssl/wangchao.im`目录中,然后执行如下脚本进行安装证书:
+证书生成成功后,会出现在`~/.acme.sh/wangchao.im/`目录下,然后创建目录`/etc/nginx/ssl/wangchao.im`后执行如下脚本:
 ```bash
-acme.sh --installcert  -d wangchao.im --keypath   /etc/nginx/ssl/wangchao.im/wangchao.im.key --fullchainpath /etc/nginx/ssl/wangchao.im/wangchao.im.cer --reloadcmd  "service nginx force-reload"
+acme.sh --install-cert -d wangchao.im \
+--key-file       /etc/nginx/ssl/wangchao.im/key.pem  \
+--fullchain-file /etc/nginx/ssl/wangchao.im/fullchain.pem \
+--reloadcmd     "service nginx force-reload"
 ```
 
 ## 4.配置证书
@@ -81,9 +84,9 @@ server {
 
     ## Strong SSL Security
     ## https://raymii.org/s/tutorials/Strong_SSL_Security_On_nginx.html & https://cipherli.st/
-    ssl on;
-    ssl_certificate /etc/nginx/ssl/wangchao.im/wangchao.im.cer;
-    ssl_certificate_key /etc/nginx/ssl/wangchao.im/wangchao.im.key;
+    #ssl on;
+    ssl_certificate /etc/nginx/ssl/wangchao.im/fullchain.pem;
+    ssl_certificate_key /etc/nginx/ssl/wangchao.im/key.pem;
 
     # Backwards compatible ciphers to retain compatibility with Java IDEs
     ssl_ciphers "ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:ECDHE-RSA-DES-CBC3-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!MD5:!PSK:!RC4";
@@ -95,7 +98,7 @@ server {
     # 根证书 + 中间证书, acme.sh 会自动生成一个 fullchain.cer,
     # 比如 /root/.acme.sh/wangchao.im/fullchain.cer
     # 将其拷贝到 /etc/nginx/ssl/wangchao.im/wangchao_im_fullchain.cer
-    ssl_trusted_certificate    /etc/nginx/ssl/wangchao.im/wangchao_im_fullchain.cer;
+    #ssl_trusted_certificate    /etc/nginx/ssl/wangchao.im/wangchao_im_fullchain.cer;
 
     ssl_stapling               on;
     ssl_stapling_verify        on;
