@@ -8,12 +8,12 @@ subtitle: Magician.of.Technique
 description:
 author: Wang Chao
 language: en #zh-CN
-timezone:
+timezone: ''
 since: 2015  # 添加 since 项
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://wangchao.im
+url: https://wangchao.im
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -39,10 +39,17 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
-  tab_replace:
+  tab_replace: ""
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ""
 
 # Category & Tag
 default_category: uncategorized
@@ -64,7 +71,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: even
+theme: particle
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

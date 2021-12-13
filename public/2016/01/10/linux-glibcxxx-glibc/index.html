@@ -1,55 +1,410 @@
-<<<<<<< HEAD
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>linux Centos6.5 GLIBCXX和GLIBC编译错误 | M.O.T</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/pure-min.css"><link rel="stylesheet" type="text/css" href="/css/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">linux Centos6.5 GLIBCXX和GLIBC编译错误</h1><a id="logo" href="/.">M.O.T</a><p class="description">Magician.of.Technique</p></div><div id="nav-menu"><a href="/." class="current"><i class="icon-home"> 首页</i></a><a href="/archives/"><i class="icon-archive"> 归档</i></a><a href="/about/"><i class="icon-about"> 关于</i></a><a href="/atom.xml"><i class="icon-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post post-page"><h1 class="post-title">linux Centos6.5 GLIBCXX和GLIBC编译错误</h1><div class="post-meta">2016-01-10 | <span class="categories">分类于<a href="/categories/Linux/"> Linux</a></span></div><span data-thread-key="2016/01/10/linux-glibcxxx-glibc/" class="ds-thread-count"></span><div class="post-content"><p>今天在编译hexo的时候，报错如下：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib64/libstdc++.so.6: version `GLIBCXX_3.4.18&#39; not found (required by clang)</span><br></pre></td></tr></table></figure></p>
-<p>这个是关于C++的库libstdc++版本过低造成的，但是我记得我已经安装到了3.4.19，所以先看下库信息，</p>
-<a id="more"></a>
-<p>执行如下命令：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strings /usr/lib64/libstdc++.so.6 | grep GLIBC</span><br></pre></td></tr></table></figure></p>
-<p>得到如下结果：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GLIBCXX_3.4&#10;GLIBCXX_3.4.1&#10;GLIBCXX_3.4.2&#10;GLIBCXX_3.4.3&#10;GLIBCXX_3.4.4&#10;GLIBCXX_3.4.5&#10;GLIBCXX_3.4.6&#10;GLIBCXX_3.4.7&#10;GLIBCXX_3.4.8&#10;GLIBCXX_3.4.9&#10;GLIBCXX_3.4.10&#10;GLIBCXX_3.4.11&#10;GLIBCXX_3.4.12&#10;GLIBCXX_3.4.13&#10;GLIBCXX_3.4.14&#10;GLIBCXX_3.4.15&#10;GLIBCXX_3.4.16&#10;GLIBCXX_3.4.17&#10;GLIBC_2.3&#10;GLIBC_2.2.5&#10;GLIBC_2.3.2&#10;GLIBCXX_FORCE_NEW&#10;GLIBCXX_DEBUG_MESSAGE_LENGTH</span><br></pre></td></tr></table></figure></p>
-<p>发现缺少版本，然后执行如下命令：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll  /usr/lib64/libstdc++.so.6</span><br></pre></td></tr></table></figure></p>
-<p>结果如下：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lrwxrwxrwx 1 root root 30 1&#26376;  10 10:22 /usr/lib64/libstdc++.so.6 -&#62; /usr/lib64/libstdc++.so.6.0.19</span><br></pre></td></tr></table></figure></p>
-<p>发现我们已经有了6.0.19版本，现在我们要找它被装到哪里了，执行如下：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find / -name libstdc++.so.6*</span><br></pre></td></tr></table></figure></p>
-<p>运行结果如下：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib64/libstdc++.so.6.0.13&#10;/usr/lib64/libstdc++.so.6&#10;/usr/lib64/libstdc++.so.6.0.19&#10;/usr/lib64/libstdc++.so.6.0.17&#10;/usr/share/gdb/auto-load/usr/lib/libstdc++.so.6.0.13-gdb.py&#10;/usr/share/gdb/auto-load/usr/lib/libstdc++.so.6.0.13-gdb.pyo&#10;/usr/share/gdb/auto-load/usr/lib/libstdc++.so.6.0.13-gdb.pyc&#10;/usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.13-gdb.py&#10;/usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.13-gdb.pyo&#10;/usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.13-gdb.pyc&#10;/usr/local/lib64/libstdc++.so.6.0.19-gdb.py&#10;/usr/local/lib64/libstdc++.so.6&#10;/usr/local/lib64/libstdc++.so.6.0.19&#10;/root/src/usr/lib/x86_64-linux-gnu/libstdc++.so.6&#10;/root/src/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17&#10;/root/src/gcc-4.8.5/x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6&#10;/root/src/gcc-4.8.5/x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.19&#10;/root/src/gcc-4.8.5/stage1-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6&#10;/root/src/gcc-4.8.5/stage1-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.19&#10;/root/src/gcc-4.8.5/prev-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6&#10;/root/src/gcc-4.8.5/prev-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.19</span><br></pre></td></tr></table></figure></p>
-<p>我们看到 /usr/local/lib64/libstdc++.so.6.0.19 ，所以gcc安装时候把libstdc++.so.6.0.19安装到了<br>/usr/local/lib64目录下，所以我们现在只需要把libstdc++.so.6链接指向libstdc++.so.6.0.19即可，执行如下：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/local/lib64/libstdc++.so.6.0.19 /usr/lib64 &#10;rm -rf /usr/lib64/libstdc++.so.6 &#10;ln -s /usr/lib64/libstdc++.so.6.0.19 /usr/lib64/libstdc++.so.6</span><br></pre></td></tr></table></figure></p>
-<p>然后我们在看下库信息：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GLIBCXX_3.4&#10;GLIBCXX_3.4.1&#10;GLIBCXX_3.4.2&#10;GLIBCXX_3.4.3&#10;GLIBCXX_3.4.4&#10;GLIBCXX_3.4.5&#10;GLIBCXX_3.4.6&#10;GLIBCXX_3.4.7&#10;GLIBCXX_3.4.8&#10;GLIBCXX_3.4.9&#10;GLIBCXX_3.4.10&#10;GLIBCXX_3.4.11&#10;GLIBCXX_3.4.12&#10;GLIBCXX_3.4.13&#10;GLIBCXX_3.4.14&#10;GLIBCXX_3.4.15&#10;GLIBCXX_3.4.16&#10;GLIBCXX_3.4.17&#10;GLIBCXX_3.4.18&#10;GLIBCXX_3.4.19&#10;GLIBC_2.3&#10;GLIBC_2.2.5&#10;GLIBC_2.3.2&#10;GLIBCXX_FORCE_NEW&#10;GLIBCXX_DEBUG_MESSAGE_LENGTH</span><br></pre></td></tr></table></figure></p>
-<p>此时我们已经支持到了3.4.19</p>
-</div><div class="tags"><a href="/tags/GLIBCXX/">GLIBCXX</a></div><div class="post-nav"><a href="/2016/01/10/linux-background-run-commond/" class="pre"><i class="icon-previous">Linux后台运行与停止进程</i></a><a href="/2016/01/09/recyclerview-nestedscrollView/" class="next">RecyclerView嵌套使用<i class="icon-next"></i></a></div><div data-thread-key="2016/01/10/linux-glibcxxx-glibc/" data-title="linux Centos6.5 GLIBCXX和GLIBC编译错误" data-url="http://yoursite.com/2016/01/10/linux-glibcxxx-glibc/" class="ds-share flat"><div class="ds-share-inline"><ul class="ds-share-icons-16"><li data-toggle="ds-share-icons-more"><a href="javascript:void(0);" class="ds-more">分享到：</a></li><li><a href="javascript:void(0);" data-service="weibo" class="ds-weibo">微博</a></li><li><a href="javascript:void(0);" data-service="qzone" class="ds-qzone">QQ空间</a></li><li><a href="javascript:void(0);" data-service="qqt" class="ds-qqt">腾讯微博</a></li><li><a href="javascript:void(0);" data-service="wechat" class="ds-wechat">微信</a></li></ul><div class="ds-share-icons-more"></div></div></div><div data-thread-key="2016/01/10/linux-glibcxxx-glibc/" data-title="linux Centos6.5 GLIBCXX和GLIBC编译错误" data-url="http://yoursite.com/2016/01/10/linux-glibcxxx-glibc/" data-author-key="1" class="ds-thread"></div></div></div></div><div class="pure-u-1-4"><div id="sidebar"><div class="widget"><form action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="search" name="word" maxlength="20" placeholder="Search" class="search-form-input"/><input type="hidden" name="si" value="http://yoursite.com"/><input name="tn" type="hidden" value="bds"/><input name="cl" type="hidden" value="3"/><input name="ct" type="hidden" value="2097152"/><input name="s" type="hidden" value="on"/></form></div><div class="widget"><div class="widget-title">分类</div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Client/">Client</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/NodeJs/">NodeJs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Openssl/">Openssl</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li></ul></div><div class="widget"><div class="widget-title">标签</div><div class="tagcloud"><a href="/tags/Http/" style="font-size: 15px;">Http</a> <a href="/tags/Android-Permission/" style="font-size: 15px;">Android Permission</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/sencha-touch/" style="font-size: 15px;">sencha touch</a> <a href="/tags/RecyclerView/" style="font-size: 15px;">RecyclerView</a> <a href="/tags/RSA/" style="font-size: 15px;">RSA</a> <a href="/tags/NodeJs/" style="font-size: 15px;">NodeJs</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/GLIBCXX/" style="font-size: 15px;">GLIBCXX</a> <a href="/tags/nohup/" style="font-size: 15px;">nohup</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Android安全/" style="font-size: 15px;">Android安全</a> <a href="/tags/ApkTool/" style="font-size: 15px;">ApkTool</a> <a href="/tags/Android-Plugin/" style="font-size: 15px;">Android Plugin</a> <a href="/tags/字体图标/" style="font-size: 15px;">字体图标</a></div></div><div class="widget"><div class="widget-title">最新文章</div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/05/06/font-icon-about/">多平台使用字体图标</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/04/android-plugin-arrangement/">Android插件化相关知识点</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/03/android-5-0-custom-permission/">Android 5.0后自定义权限注意事项</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/03/android-apk-upgrade-error/">Android更新APK提示解析包时出现错误</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/23/xcode7-nsurlsession-send-http/">xcode7中NSURLSession发送HTTP异常</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/21/openssl-rsa-20160121/">OpenSSL之RSA</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/20/android-secondary-build/">Android二次打包</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/20/android-apktool-error/">ApkTool反编译报错</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/17/android-security/">Android安全之完整性校验</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/12/textview-html-tags/">TextView支持的HTML标签</a></li></ul></div><div class="widget"><div class="comments-title">最近评论</div><div data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-admin="0" data-excerpt-length="32" data-show-title="1" class="ds-recent-comments"></div></div><div class="widget"><div class="widget-title">友情链接</div></div></div></div></div><div id="footer">© <a href="/." rel="nofollow">M.O.T.</a> Powered by<a rel="nofollow" target="_blank" href="https://github.com/motcwang"> motcwang.</a></div><a id="rocket" href="#top" class="show"></a><script src="/js/jquery.min.js" type="text/javascript"></script>
-<script src="/js/totop.js" type="text/javascript"></script><script src="/js/fancybox.pack.js" type="text/javascript"></script>
-<script src="/js/jquery.fancybox.js" type="text/javascript"></script><link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css"><script>var duoshuoQuery = {short_name:'MOT'};
-(function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//dn-comment.qbox.me/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-        || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script><script>var _hmt = _hmt || [];
-=======
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="description"><meta name="viewport" content="width=device-width, initial-scale=1"><title>linux Centos6.5 GLIBCXX和GLIBC编译错误 · M.O.T</title><link rel="short icon" href="/favicon.ico"><!-- font--><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono"><!-- icon--><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><!-- theme style--><link rel="stylesheet" href="/css/style.css"><!-- baidu analytics--><script type="text/javascript">var _hmt = _hmt || [];
->>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?c1182642a61b1fd92ac710a6df67bb1c";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script></head><body><div id="main"><header><a href="/." class="logo">M.O.T</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">Home</a></li><li class="nav-link"><a href="/archives/" target="_self">Archives</a></li><li class="nav-link"><a href="/tags/" target="_self">Tags</a></li><li class="nav-link"><a href="/about/" target="_self">About</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">linux Centos6.5 GLIBCXX和GLIBC编译错误</h1><span class="post-time">Jan 10, 2016</span><div class="post-content"><p>今天在编译hexo的时候，报错如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/lib64/libstdc++.so.6: version `GLIBCXX_3.4.18&apos; not found (required by clang)</div></pre></td></tr></table></figure></p>
-<p>这个是关于C++的库libstdc++版本过低造成的，但是我记得我已经安装到了3.4.19，所以先看下库信息，</p>
-<a id="more"></a>
-<p>执行如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">strings /usr/lib64/libstdc++.so.6 | grep GLIBC</div></pre></td></tr></table></figure></p>
-<p>得到如下结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">GLIBCXX_3.4</div><div class="line">GLIBCXX_3.4.1</div><div class="line">GLIBCXX_3.4.2</div><div class="line">GLIBCXX_3.4.3</div><div class="line">GLIBCXX_3.4.4</div><div class="line">GLIBCXX_3.4.5</div><div class="line">GLIBCXX_3.4.6</div><div class="line">GLIBCXX_3.4.7</div><div class="line">GLIBCXX_3.4.8</div><div class="line">GLIBCXX_3.4.9</div><div class="line">GLIBCXX_3.4.10</div><div class="line">GLIBCXX_3.4.11</div><div class="line">GLIBCXX_3.4.12</div><div class="line">GLIBCXX_3.4.13</div><div class="line">GLIBCXX_3.4.14</div><div class="line">GLIBCXX_3.4.15</div><div class="line">GLIBCXX_3.4.16</div><div class="line">GLIBCXX_3.4.17</div><div class="line">GLIBC_2.3</div><div class="line">GLIBC_2.2.5</div><div class="line">GLIBC_2.3.2</div><div class="line">GLIBCXX_FORCE_NEW</div><div class="line">GLIBCXX_DEBUG_MESSAGE_LENGTH</div></pre></td></tr></table></figure></p>
-<p>发现缺少版本，然后执行如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ll  /usr/lib64/libstdc++.so.6</div></pre></td></tr></table></figure></p>
-<p>结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">lrwxrwxrwx 1 root root 30 1月  10 10:22 /usr/lib64/libstdc++.so.6 -&gt; /usr/lib64/libstdc++.so.6.0.19</div></pre></td></tr></table></figure></p>
-<p>发现我们已经有了6.0.19版本，现在我们要找它被装到哪里了，执行如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find / -name libstdc++.so.6*</div></pre></td></tr></table></figure></p>
-<p>运行结果如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">/usr/lib64/libstdc++.so.6.0.13</div><div class="line">/usr/lib64/libstdc++.so.6</div><div class="line">/usr/lib64/libstdc++.so.6.0.19</div><div class="line">/usr/lib64/libstdc++.so.6.0.17</div><div class="line">/usr/share/gdb/auto-load/usr/lib/libstdc++.so.6.0.13-gdb.py</div><div class="line">/usr/share/gdb/auto-load/usr/lib/libstdc++.so.6.0.13-gdb.pyo</div><div class="line">/usr/share/gdb/auto-load/usr/lib/libstdc++.so.6.0.13-gdb.pyc</div><div class="line">/usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.13-gdb.py</div><div class="line">/usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.13-gdb.pyo</div><div class="line">/usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.13-gdb.pyc</div><div class="line">/usr/local/lib64/libstdc++.so.6.0.19-gdb.py</div><div class="line">/usr/local/lib64/libstdc++.so.6</div><div class="line">/usr/local/lib64/libstdc++.so.6.0.19</div><div class="line">/root/src/usr/lib/x86_64-linux-gnu/libstdc++.so.6</div><div class="line">/root/src/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17</div><div class="line">/root/src/gcc-4.8.5/x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6</div><div class="line">/root/src/gcc-4.8.5/x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.19</div><div class="line">/root/src/gcc-4.8.5/stage1-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6</div><div class="line">/root/src/gcc-4.8.5/stage1-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.19</div><div class="line">/root/src/gcc-4.8.5/prev-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6</div><div class="line">/root/src/gcc-4.8.5/prev-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.19</div></pre></td></tr></table></figure></p>
-<p>我们看到 /usr/local/lib64/libstdc++.so.6.0.19 ，所以gcc安装时候把libstdc++.so.6.0.19安装到了/usr/local/lib64目录下，所以我们现在只需要把libstdc++.so.6链接指向libstdc++.so.6.0.19即可，执行如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cp /usr/local/lib64/libstdc++.so.6.0.19 /usr/lib64 </div><div class="line">rm -rf /usr/lib64/libstdc++.so.6 </div><div class="line">ln -s /usr/lib64/libstdc++.so.6.0.19 /usr/lib64/libstdc++.so.6</div></pre></td></tr></table></figure></p>
-<p>然后我们在看下库信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">GLIBCXX_3.4</div><div class="line">GLIBCXX_3.4.1</div><div class="line">GLIBCXX_3.4.2</div><div class="line">GLIBCXX_3.4.3</div><div class="line">GLIBCXX_3.4.4</div><div class="line">GLIBCXX_3.4.5</div><div class="line">GLIBCXX_3.4.6</div><div class="line">GLIBCXX_3.4.7</div><div class="line">GLIBCXX_3.4.8</div><div class="line">GLIBCXX_3.4.9</div><div class="line">GLIBCXX_3.4.10</div><div class="line">GLIBCXX_3.4.11</div><div class="line">GLIBCXX_3.4.12</div><div class="line">GLIBCXX_3.4.13</div><div class="line">GLIBCXX_3.4.14</div><div class="line">GLIBCXX_3.4.15</div><div class="line">GLIBCXX_3.4.16</div><div class="line">GLIBCXX_3.4.17</div><div class="line">GLIBCXX_3.4.18</div><div class="line">GLIBCXX_3.4.19</div><div class="line">GLIBC_2.3</div><div class="line">GLIBC_2.2.5</div><div class="line">GLIBC_2.3.2</div><div class="line">GLIBCXX_FORCE_NEW</div><div class="line">GLIBCXX_DEBUG_MESSAGE_LENGTH</div></pre></td></tr></table></figure></p>
-<p>此时我们已经支持到了3.4.19</p>
-</div></article><div class="tags"><a href="/tags/Linux/">Linux</a><a href="/tags/GLIBCXX/">GLIBCXX</a></div><div class="paginator"><a href="/2016/01/10/linux-background-run-commond/" class="prev"><i class="iconfont icon-left"></i><span> Prev</span></a><a href="/2016/01/09/recyclerview-nestedscrollView/" class="next"><span>Next</span><i class="iconfont icon-right"></i></a></div><section id="comments"><div id="disqus_thread"></div></section><script type="text/javascript">(function() {
-var d = document, s = d.createElement('script');
 
-s.src = '//WangChao.disqus.com/embed.js';
+<!DOCTYPE html>
+<html lang="en ">
 
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script></section><footer><div class="copyright"><p>&copy;2015-2016<span class="heart"><i class="iconfont icon-heart"></i></span><span class="author">Wang Chao</span></p></div><label id="back2top"><i class="iconfont icon-up"></i></label></footer></div></body><script src="/js/zepto.min.js"></script><script src="/js/theme.js"></script></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.O.T || linux CentOS6.5 GLIBCXX和GLIBC编译错误</title>
+    <meta name="author" content="Wang Chao">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar.png">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">M.O.T</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>home</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>about</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>archives</span>
+        </a>
+        
+        <a href="/like/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>categories</span>
+        </a>
+        
+        <a href="/like/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>tags</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://en.korilin.com">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>英文博客</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>M.O.T</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/like/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                </div>
+            </a>
+            
+            <a href="/like/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="https://en.korilin.com">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">英文博客</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>linux CentOS6.5 GLIBCXX和GLIBC编译错误 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2016/1/10
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/Linux">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                Linux
+            </a>
+        </span>
+        
+
+        
+
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Linux" style=color:#ff7d73>
+                    Linux
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/GLIBCXX" style=color:#879cff>
+                    GLIBCXX
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p>今天在编译hexo的时候，报错如下：</p>
+<pre><code class="linux">    /usr/lib64/libstdc++.so.6: version `GLIBCXX_3.4.18&#39; not found (required by clang)
+</code></pre>
+<p>这个是关于C++的库libstdc++版本过低造成的，但是我记得我已经安装到了3.4.19，所以先看下库信息，</p>
+<span id="more"></span>
+
+<p>执行如下命令：</p>
+<pre><code class="linux">    strings /usr/lib64/libstdc++.so.6 | grep GLIBC
+</code></pre>
+<p>得到如下结果：</p>
+<pre><code class="linux">    GLIBCXX_3.4
+    GLIBCXX_3.4.1
+    GLIBCXX_3.4.2
+    GLIBCXX_3.4.3
+    GLIBCXX_3.4.4
+    GLIBCXX_3.4.5
+    GLIBCXX_3.4.6
+    GLIBCXX_3.4.7
+    GLIBCXX_3.4.8
+    GLIBCXX_3.4.9
+    GLIBCXX_3.4.10
+    GLIBCXX_3.4.11
+    GLIBCXX_3.4.12
+    GLIBCXX_3.4.13
+    GLIBCXX_3.4.14
+    GLIBCXX_3.4.15
+    GLIBCXX_3.4.16
+    GLIBCXX_3.4.17
+    GLIBC_2.3
+    GLIBC_2.2.5
+    GLIBC_2.3.2
+    GLIBCXX_FORCE_NEW
+    GLIBCXX_DEBUG_MESSAGE_LENGTH
+</code></pre>
+<p>发现缺少版本，然后执行如下命令：</p>
+<pre><code class="linux">    ll  /usr/lib64/libstdc++.so.6  
+</code></pre>
+<p>结果如下：</p>
+<pre><code class="linux">    lrwxrwxrwx 1 root root 30 1月  10 10:22 /usr/lib64/libstdc++.so.6 -&gt; /usr/lib64/libstdc++.so.6.0.19
+</code></pre>
+<p>发现我们已经有了6.0.19版本，现在我们要找它被装到哪里了，执行如下：</p>
+<pre><code class="linux">    find / -name libstdc++.so.6*  
+</code></pre>
+<p>运行结果如下：</p>
+<pre><code class="linux">    /usr/lib64/libstdc++.so.6.0.13
+    /usr/lib64/libstdc++.so.6
+    /usr/lib64/libstdc++.so.6.0.19
+    /usr/lib64/libstdc++.so.6.0.17
+    /usr/share/gdb/auto-load/usr/lib/libstdc++.so.6.0.13-gdb.py
+    /usr/share/gdb/auto-load/usr/lib/libstdc++.so.6.0.13-gdb.pyo
+    /usr/share/gdb/auto-load/usr/lib/libstdc++.so.6.0.13-gdb.pyc
+    /usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.13-gdb.py
+    /usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.13-gdb.pyo
+    /usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.13-gdb.pyc
+    /usr/local/lib64/libstdc++.so.6.0.19-gdb.py
+    /usr/local/lib64/libstdc++.so.6
+    /usr/local/lib64/libstdc++.so.6.0.19
+    /root/src/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+    /root/src/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17
+    /root/src/gcc-4.8.5/x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6
+    /root/src/gcc-4.8.5/x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.19
+    /root/src/gcc-4.8.5/stage1-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6
+    /root/src/gcc-4.8.5/stage1-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.19
+    /root/src/gcc-4.8.5/prev-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6
+    /root/src/gcc-4.8.5/prev-x86_64-unknown-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.19
+</code></pre>
+<p>我们看到 /usr/local/lib64/libstdc++.so.6.0.19 ，所以gcc安装时候把libstdc++.so.6.0.19安装到了/usr/local/lib64目录下，所以我们现在只需要把libstdc++.so.6链接指向libstdc++.so.6.0.19即可，执行如下：</p>
+<pre><code class="linux">    cp /usr/local/lib64/libstdc++.so.6.0.19 /usr/lib64 
+    rm -rf /usr/lib64/libstdc++.so.6 
+    ln -s /usr/lib64/libstdc++.so.6.0.19 /usr/lib64/libstdc++.so.6
+</code></pre>
+<p>然后我们在看下库信息：</p>
+<pre><code class="linux">    GLIBCXX_3.4
+    GLIBCXX_3.4.1
+    GLIBCXX_3.4.2
+    GLIBCXX_3.4.3
+    GLIBCXX_3.4.4
+    GLIBCXX_3.4.5
+    GLIBCXX_3.4.6
+    GLIBCXX_3.4.7
+    GLIBCXX_3.4.8
+    GLIBCXX_3.4.9
+    GLIBCXX_3.4.10
+    GLIBCXX_3.4.11
+    GLIBCXX_3.4.12
+    GLIBCXX_3.4.13
+    GLIBCXX_3.4.14
+    GLIBCXX_3.4.15
+    GLIBCXX_3.4.16
+    GLIBCXX_3.4.17
+    GLIBCXX_3.4.18
+    GLIBCXX_3.4.19
+    GLIBC_2.3
+    GLIBC_2.2.5
+    GLIBC_2.3.2
+    GLIBCXX_FORCE_NEW
+    GLIBCXX_DEBUG_MESSAGE_LENGTH
+</code></pre>
+<p>此时我们已经支持到了3.4.19</p>
+
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2018 - 2021 M.O.T
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @Wang Chao
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'hexo-theme-particle',      // The repository of store comments,
+        owner: 'korilin',
+        admin: ['korilin'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>

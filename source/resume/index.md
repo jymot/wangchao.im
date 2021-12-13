@@ -3,9 +3,9 @@ title: Resume
 date: 2016-01-09 11:38:21
 ---
 ### 王超
- * 年龄:27   
+ * 年龄:28
  * E-mail:[magician.of.technique@aliyun.com]
- * Github: [https://github.com/motcwang](https://github.com/motcwang)
+ * Github: [https://github.com/jymot](https://github.com/jymot)
  * 工作经验: 7年
 ---
 
@@ -20,7 +20,7 @@ date: 2016-01-09 11:38:21
 ---
 
 ### 主要技能
- * 主要语言: Java，JavaScript
+ * 主要语言: Java，JavaScript,
  * 熟练掌握移动/Web前端开发，Android，iOS，小程序，H5等；移动端热更新相关技术
  * 熟练掌握 Spring，Spring Cloud，Dubbo 以及相关开源框架
  * 熟练掌握 Spring，OAuth2 相关安全认证流程，用户权限管理系统设计

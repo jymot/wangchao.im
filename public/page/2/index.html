@@ -1,25 +1,1286 @@
-<<<<<<< HEAD
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>M.O.T | Magician.of.Technique</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/pure-min.css"><link rel="stylesheet" type="text/css" href="/css/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">M.O.T</h1><a id="logo" href="/.">M.O.T</a><p class="description">Magician.of.Technique</p></div><div id="nav-menu"><a href="/." class="current"><i class="icon-home"> 首页</i></a><a href="/archives/"><i class="icon-archive"> 归档</i></a><a href="/about/"><i class="icon-about"> 关于</i></a><a href="/atom.xml"><i class="icon-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h2 class="post-title"><a href="/2016/01/11/git-ssh-config/">Git配置SSH</a></h2><div class="post-meta">2016-01-11</div><span data-thread-key="2016/01/11/git-ssh-config/" class="ds-thread-count"></span><div class="post-content"><h4 id="1-_u8BBE_u7F6EGit_u7684_u7528_u6237_u540D_u548C_u90AE_u4EF6"><a href="#1-_u8BBE_u7F6EGit_u7684_u7528_u6237_u540D_u548C_u90AE_u4EF6" class="headerlink" title="1.设置Git的用户名和邮件"></a>1.设置Git的用户名和邮件</h4><p>执行如下命令：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &#34;UserName&#34;&#10;git config --global user.email &#34;username@xx.xx&#34;</span><br></pre></td></tr></table></figure></p></div><p class="readmore"><a href="/2016/01/11/git-ssh-config/">阅读更多</a></p></div><div class="post"><h2 class="post-title"><a href="/2016/01/10/nodejs-update/">NodeJs更新</a></h2><div class="post-meta">2016-01-10</div><span data-thread-key="2016/01/10/nodejs-update/" class="ds-thread-count"></span><div class="post-content"><h3 id="1-_u66F4_u65B0npm"><a href="#1-_u66F4_u65B0npm" class="headerlink" title="1.更新npm"></a>1.更新npm</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update -g</span><br></pre></td></tr></table></figure></div><p class="readmore"><a href="/2016/01/10/nodejs-update/">阅读更多</a></p></div><div class="post"><h2 class="post-title"><a href="/2016/01/10/linux-background-run-commond/">Linux后台运行与停止进程</a></h2><div class="post-meta">2016-01-10</div><span data-thread-key="2016/01/10/linux-background-run-commond/" class="ds-thread-count"></span><div class="post-content"><p>有时候我们在Terminal中其服务时候，需要让其在关闭Terminal的情况下也可以运行，那么我们这里用到的<br>是nohup命令，执行命令如下:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup &#60;commond&#62; &#38;</span><br></pre></td></tr></table></figure></p></div><p class="readmore"><a href="/2016/01/10/linux-background-run-commond/">阅读更多</a></p></div><div class="post"><h2 class="post-title"><a href="/2016/01/10/linux-glibcxxx-glibc/">linux Centos6.5 GLIBCXX和GLIBC编译错误</a></h2><div class="post-meta">2016-01-10</div><span data-thread-key="2016/01/10/linux-glibcxxx-glibc/" class="ds-thread-count"></span><div class="post-content"><p>今天在编译hexo的时候，报错如下：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/lib64/libstdc++.so.6: version `GLIBCXX_3.4.18&#39; not found (required by clang)</span><br></pre></td></tr></table></figure></p>
-<p>这个是关于C++的库libstdc++版本过低造成的，但是我记得我已经安装到了3.4.19，所以先看下库信息，</p></div><p class="readmore"><a href="/2016/01/10/linux-glibcxxx-glibc/">阅读更多</a></p></div><div class="post"><h2 class="post-title"><a href="/2016/01/09/recyclerview-nestedscrollView/">RecyclerView嵌套使用</a></h2><div class="post-meta">2016-01-09</div><span data-thread-key="2016/01/09/recyclerview-nestedscrollView/" class="ds-thread-count"></span><div class="post-content"><p>一般情况下RecyclerView是不推荐嵌套使用的，我们可以用使用不同的Type使RecyclerView达到嵌套的效果，<br>这里先不介绍这种方式。因为最近项目需要将RecyclerView嵌套在NestedScrollView中使用，下面记录一下<br>在NestedScrollView中如何使用RecyclerView。</p></div><p class="readmore"><a href="/2016/01/09/recyclerview-nestedscrollView/">阅读更多</a></p></div><div class="post"><h2 class="post-title"><a href="/2016/01/09/mhttpadapter/">Http请求适配性封装</a></h2><div class="post-meta">2016-01-09</div><span data-thread-key="2016/01/09/mhttpadapter/" class="ds-thread-count"></span><div class="post-content"><p>现在强大的第三方网络请求库太多了，比如OkHttp，android-async-http等，我们在用这些第三方网络请求库的时候，一般因为<br>项目需求，都会简单的做一层封装，下面我就来说我对此的理解。</p></div><p class="readmore"><a href="/2016/01/09/mhttpadapter/">阅读更多</a></p></div><div class="post"><h2 class="post-title"><a href="/2016/01/08/sencha-touch-chrome43/">sencha-touch-chrome43</a></h2><div class="post-meta">2016-01-08</div><span data-thread-key="2016/01/08/sencha-touch-chrome43/" class="ds-thread-count"></span><div class="post-content"><p>解决 Sencha Touch 在 Chrome 43 上面滑动问题的bug<br><img src="/images/Screen-Shot-2015-04-28-at-9.10.36-AM.png" alt="Smithsonian Image"></p></div><p class="readmore"><a href="/2016/01/08/sencha-touch-chrome43/">阅读更多</a></p></div><div class="page-navigator"><a href="/" class="pre">上一页</a></div></div></div><div class="pure-u-1-4"><div id="sidebar"><div class="widget"><form action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="search" name="word" maxlength="20" placeholder="Search" class="search-form-input"/><input type="hidden" name="si" value="http://yoursite.com"/><input name="tn" type="hidden" value="bds"/><input name="cl" type="hidden" value="3"/><input name="ct" type="hidden" value="2097152"/><input name="s" type="hidden" value="on"/></form></div><div class="widget"><div class="widget-title">分类</div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Client/">Client</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/NodeJs/">NodeJs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Openssl/">Openssl</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li></ul></div><div class="widget"><div class="widget-title">标签</div><div class="tagcloud"><a href="/tags/Http/" style="font-size: 15px;">Http</a> <a href="/tags/Android-Permission/" style="font-size: 15px;">Android Permission</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/sencha-touch/" style="font-size: 15px;">sencha touch</a> <a href="/tags/RecyclerView/" style="font-size: 15px;">RecyclerView</a> <a href="/tags/RSA/" style="font-size: 15px;">RSA</a> <a href="/tags/NodeJs/" style="font-size: 15px;">NodeJs</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/GLIBCXX/" style="font-size: 15px;">GLIBCXX</a> <a href="/tags/nohup/" style="font-size: 15px;">nohup</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Android安全/" style="font-size: 15px;">Android安全</a> <a href="/tags/ApkTool/" style="font-size: 15px;">ApkTool</a> <a href="/tags/Android-Plugin/" style="font-size: 15px;">Android Plugin</a> <a href="/tags/字体图标/" style="font-size: 15px;">字体图标</a></div></div><div class="widget"><div class="widget-title">最新文章</div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/05/06/font-icon-about/">多平台使用字体图标</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/04/android-plugin-arrangement/">Android插件化相关知识点</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/03/android-5-0-custom-permission/">Android 5.0后自定义权限注意事项</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/03/android-apk-upgrade-error/">Android更新APK提示解析包时出现错误</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/23/xcode7-nsurlsession-send-http/">xcode7中NSURLSession发送HTTP异常</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/21/openssl-rsa-20160121/">OpenSSL之RSA</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/20/android-secondary-build/">Android二次打包</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/20/android-apktool-error/">ApkTool反编译报错</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/17/android-security/">Android安全之完整性校验</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/12/textview-html-tags/">TextView支持的HTML标签</a></li></ul></div><div class="widget"><div class="comments-title">最近评论</div><div data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-admin="0" data-excerpt-length="32" data-show-title="1" class="ds-recent-comments"></div></div><div class="widget"><div class="widget-title">友情链接</div></div></div></div></div><div id="footer">© <a href="/." rel="nofollow">M.O.T.</a> Powered by<a rel="nofollow" target="_blank" href="https://github.com/motcwang"> motcwang.</a></div><a id="rocket" href="#top" class="show"></a><script src="/js/jquery.min.js" type="text/javascript"></script>
-<script src="/js/totop.js" type="text/javascript"></script><script src="/js/fancybox.pack.js" type="text/javascript"></script>
-<script src="/js/jquery.fancybox.js" type="text/javascript"></script><link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css"><script>var duoshuoQuery = {short_name:'MOT'};
-(function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//dn-comment.qbox.me/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-        || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script><script>var _hmt = _hmt || [];
-=======
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="description"><meta name="viewport" content="width=device-width, initial-scale=1"><title>M.O.T</title><link rel="short icon" href="/favicon.ico"><!-- font--><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto Mono"><!-- icon--><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><!-- theme style--><link rel="stylesheet" href="/css/style.css"><!-- baidu analytics--><script type="text/javascript">var _hmt = _hmt || [];
->>>>>>> ba764f07ba7311c81946d7983e27f41e65725a01
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?c1182642a61b1fd92ac710a6df67bb1c";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script></head><body><div id="main"><header><a href="/." class="logo">M.O.T</a><ul class="nav"><li class="nav-link"><a href="/" class="active">Home</a></li><li class="nav-link"><a href="/archives/" target="_self">Archives</a></li><li class="nav-link"><a href="/tags/" target="_self">Tags</a></li><li class="nav-link"><a href="/about/" target="_self">About</a></li></ul></header><section id="container"><ul class="home"><li class="post-item"><article class="post"><h1 class="post-title"><a href="/2016/05/04/android-plugin-arrangement/" class="post-link">Android插件化相关知识点</a></h1><span class="post-time">May 4, 2016</span><div class="post-content"><p>关于Android插件化开发涉及到的一些知识点汇总：</p>
-<h3 id="u57FA_u7840"><a href="#u57FA_u7840" class="headerlink" title="基础"></a>基础</h3><p>1.<a href="https://www.ibm.com/developerworks/cn/java/j-lo-classloader/">Java 类加载器</a><br>2.<a href="https://github.com/JustinSDK/JavaSE6Tutorial/blob/master/docs/CH16.md">反射原理</a><br>3.<a href="http://www.jianshu.com/p/6f6bb2f0ece9">代理模式及Java实现动态代理</a><br></div><a href="/2016/05/04/android-plugin-arrangement/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h1 class="post-title"><a href="/2016/05/03/android-5-0-custom-permission/" class="post-link">Android 5.0后自定义权限注意事项</a></h1><span class="post-time">May 3, 2016</span><div class="post-content"><h3 id="Android_5-0__u8BF4_u660E"><a href="#Android_5-0__u8BF4_u660E" class="headerlink" title="Android 5.0 说明"></a>Android 5.0 说明</h3><p>Starting in Android 5.0, the system enforces a new uniqueness restriction on custom permissions<br>for apps that are signed with different keys. Now only one app on a device can define a given<br>custom permission (as determined by its name), unless the other app defining the permission is </p></div><a href="/2016/05/03/android-5-0-custom-permission/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h1 class="post-title"><a href="/2016/05/03/android-apk-upgrade-error/" class="post-link">Android更新APK提示解析包时出现错误</a></h1><span class="post-time">May 3, 2016</span><div class="post-content"><p>今天在测试客户端升级的时候，突然发现客户端在升级的时候下载成功升级包后，安装过程中提示“解析包时出现错误”，因为这个错误可能有多个问题导致，比如安装包下载不完整等。<br></div><a href="/2016/05/03/android-apk-upgrade-error/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h1 class="post-title"><a href="/2016/02/23/xcode7-nsurlsession-send-http/" class="post-link">xcode7中NSURLSession发送HTTP异常</a></h1><span class="post-time">Feb 23, 2016</span><div class="post-content"><p>今天在使用NSURLSession时候报了如下的错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Application Transport Security has blocked a cleartext HTTP (http://) </div><div class="line">resource load since it is insecure. Temporary exceptions can be configured </div><div class="line">via your app&apos;s Info.plist file.</div></pre></td></tr></table></figure></p></div><a href="/2016/02/23/xcode7-nsurlsession-send-http/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h1 class="post-title"><a href="/2016/01/21/openssl-rsa-20160121/" class="post-link">OpenSSL之RSA</a></h1><span class="post-time">Jan 21, 2016</span><div class="post-content"><p>OpenSSL集成了众多密码算法，今天主要说下RSA非对称加解密以及在Android中的使用。<br>那么我们需要先了解一下OpenSSL关于RSA的相关命令使用方法<br></div><a href="/2016/01/21/openssl-rsa-20160121/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h1 class="post-title"><a href="/2016/01/20/android-secondary-build/" class="post-link">Android二次开发打包</a></h1><span class="post-time">Jan 20, 2016</span><div class="post-content"><p>关于Android二次打包，有的是为了更换证书，有的是为了修改资源，有的是为了注入广告，不管处于什么样的目的，都希望用于正当渠道。废话不多说，直接进入正题。</p></div><a href="/2016/01/20/android-secondary-build/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h1 class="post-title"><a href="/2016/01/20/android-apktool-error/" class="post-link">ApkTool反编译报错</a></h1><span class="post-time">Jan 20, 2016</span><div class="post-content"><p>今天需要使用ApkTool反编译APK，因为好久没用了，所以就去github上面下载最新的版本<a href="https://github.com/iBotPeaches/Apktool">ApkTool</a>然后替换对应的jar和bash脚本</p></div><a href="/2016/01/20/android-apktool-error/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h1 class="post-title"><a href="/2016/01/17/android-security/" class="post-link">Android安全之完整性校验</a></h1><span class="post-time">Jan 17, 2016</span><div class="post-content"><p>最近在研究Android安全应用加固相关的技术，今天我先简单说下APK的完整性校验，首先我们先看一下一般APK里面的构造，下图为直接解压APK的目录结构：<br></div><a href="/2016/01/17/android-security/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h1 class="post-title"><a href="/2016/01/12/textview-html-tags/" class="post-link">TextView支持的HTML标签</a></h1><span class="post-time">Jan 12, 2016</span><div class="post-content"><p>Android中TextView并不支持所有的HTML标签，如果需要更为复杂的操作最好使用WebView，今天再网上看到TextView支持的HTML标签的总结，记录在这里：<br></div><a href="/2016/01/12/textview-html-tags/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h1 class="post-title"><a href="/2016/01/11/git-ssh-config/" class="post-link">Git配置SSH</a></h1><span class="post-time">Jan 11, 2016</span><div class="post-content"><h4 id="1-_u8BBE_u7F6EGit_u7684_u7528_u6237_u540D_u548C_u90AE_u4EF6"><a href="#1-_u8BBE_u7F6EGit_u7684_u7528_u6237_u540D_u548C_u90AE_u4EF6" class="headerlink" title="1.设置Git的用户名和邮件"></a>1.设置Git的用户名和邮件</h4><p>执行如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;UserName&quot;</div><div class="line">git config --global user.email &quot;username@xx.xx&quot;</div></pre></td></tr></table></figure></p></div><a href="/2016/01/11/git-ssh-config/" class="read-more">Read more..</a></article></li></ul><div class="paginator"><a href="/" class="prev"><i class="iconfont icon-left"></i><span> Prev</span></a><a href="/page/3/" class="next"><span>Next</span><i class="iconfont icon-right"></i></a></div></section><footer><div class="social"><a href="mailto:magician.of.technique@aliyun.com" class="iconfont icon-email"> </a><a href="https://github.com/motcwang" class="iconfont icon-github"> </a><a href="/atom.xml" class="iconfont icon-rss"> </a></div><div class="copyright"><p>&copy;2015-2016<span class="heart"><i class="iconfont icon-heart"></i></span><span class="author">Wang Chao</span></p></div><label id="back2top"><i class="iconfont icon-up"></i></label></footer></div></body><script src="/js/zepto.min.js"></script><script src="/js/theme.js"></script></html>
+
+<!DOCTYPE html>
+<html lang="en ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.O.T || Magician.of.Technique</title>
+    <meta name="author" content="Wang Chao">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar.png">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">M.O.T</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>home</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>about</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>archives</span>
+        </a>
+        
+        <a href="/like/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>categories</span>
+        </a>
+        
+        <a href="/like/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>tags</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://en.korilin.com">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>英文博客</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>M.O.T</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/like/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                </div>
+            </a>
+            
+            <a href="/like/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="https://en.korilin.com">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">英文博客</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                    <div id="home-head" style=background-image:url('home.jpg')>
+    <script>
+        var menu = document.getElementById("menu")
+        menu.className += " menu-color"
+    </script>
+     
+    <div id="home-info" class="home-info" @click="home_click">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>M.O.T</h1>
+                <h3>Magician.of.Technique</h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+     
+</div>
+
+
+
+<div id="home-posts-wrap" class=>
+    <div id="home-posts">
+
+        <div id="posts">
+            
+
+<div class="post">
+
+    <a href="/2017/06/20/bash-do-sudo-permission/">
+        <h2>
+            Shell脚本执行需要 root 权限的命令
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Shell">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Shell
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2017/6/20
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <p>直接上代码，命令如下：</p>
+<pre><code class="bash">echo &quot;passwd&quot;|sudo -S command
+</code></pre>
+<p>将<code>passwd</code>替换为你的<code>root</code>权限需要的密码，<code>command</code> 替换为需要执行的命令即可。</p>
+<p><strong>example:</strong><br>比如 test.sh 脚本内容如下</p>
+<pre><code class="bash">#!/bin/bash
+echo &quot;123456&quot;|sudo -S cp -rf  hosts.txt /etc/hosts
+</code></pre>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Shell" style=color:#ffa2c4>
+                Shell
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2017/06/20/bash-do-sudo-permission/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2017/06/20/easyhosts-config-schedule-upgrade/">
+        <h2>
+            Mac上如何配置周期任务和 easyhosts 的使用
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Mac">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Mac
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2017/6/20
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <h3 id="easyhosts"><a href="#easyhosts" class="headerlink" title="easyhosts"></a><a target="_blank" rel="noopener" href="https://github.com/forkgood/easyhosts">easyhosts</a></h3><p>该项目基于 <code>Github</code> 项目整合的远程 <code>Hosts</code> 直链，适配多种规则、终端，每<strong>30</strong>分钟自动同步一次<code>Github</code>最新可用项目并提供打包下载。所以我们可以替换本地的<code>hosts</code>文件，已达到访问<code>Google，Facebook，Instagram</code>等网站的目的。</p>
+<p>这里，我们只需要周期执行脚本，更新我们的<code>hosts</code>文件就可以了。</p>
+<p>首先为们<code>clone</code>一下工程</p>
+<pre><code class="bash">git clone https://github.com/forkgood/easyhosts.git
+</code></pre>
+<p>然后将我们的更新脚本放到<code>clone</code>的目录中。</p>
+<p>比如更新<code>hosts</code>文件的脚本叫<code>schedule-host.sh</code>，其内容如下：</p>
+<pre><code class="bash">#!/bin/bash
+git pull
+# 将 pwd 替换为你电脑的登陆密码，也就是 root 权限需要的密码。
+# mac 中需要使用 hosts.txt 文件
+echo &quot;pwd&quot;|sudo -S cp -rf  hosts.txt /etc/hosts
+</code></pre>
+<p>接下来就是周期执行脚本了。</p>
+<h3 id="Mac上周期执行任务"><a href="#Mac上周期执行任务" class="headerlink" title="Mac上周期执行任务"></a>Mac上周期执行任务</h3><p>主要有两种方式：</p>
+<ul>
+<li>launchctl</li>
+<li>Linux 上的 crontab</li>
+</ul>
+<p>本次主要讲一下<code>launchctl</code>的使用。</p>
+<h5 id="1-创建plist文件"><a href="#1-创建plist文件" class="headerlink" title="1.创建plist文件"></a>1.创建<code>plist</code>文件</h5><p>比如文件名为<code>im.wangchao.schedulehosts.plist</code>,内容如下：</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+    &lt;key&gt;Label&lt;/key&gt;
+    &lt;string&gt;im.wangchao.schedulehosts&lt;/string&gt;   &lt;!-- 名称 --&gt;
+    &lt;key&gt;ProgramArguments&lt;/key&gt;
+    &lt;array&gt;
+        &lt;string&gt;/Users/xxx/xxx/easyhosts/schedule-host.sh&lt;/string&gt;  &lt;!-- 需要执行的脚本，绝对路径，这里直接使用上面创建的更新 hosts 的脚本 --&gt;
+    &lt;/array&gt;
+    &lt;key&gt;StartInterval&lt;/key&gt;
+      &lt;integer&gt;18000&lt;/integer&gt;  &lt;!-- 执行的周期间隔，单位为秒 --&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre>
+<p>为了确保我们的<code>plist</code>文件正确，我们可以使用<code>plutil -lint</code>对文件进行校验。</p>
+<h5 id="2-保存plist文件"><a href="#2-保存plist文件" class="headerlink" title="2.保存plist文件"></a>2.保存<code>plist</code>文件</h5><p>将我们刚刚创建的<code>plist</code>文件保存到<code>/Library/LaunchAgents</code>目录下即可。</p>
+<ul>
+<li>~/Library/LaunchAgents 由用户自己定义的任务项</li>
+<li>/Library/LaunchAgents 由管理员为用户定义的任务项</li>
+<li>/Library/LaunchDaemons 由管理员定义的守护进程任务项</li>
+<li>/System/Library/LaunchAgents 由Mac OS X为用户定义的任务项</li>
+<li>/System/Library/LaunchDaemons 由Mac OS X定义的守护进程任务项</li>
+</ul>
+<p>其中<code>/System/Library</code>，<code>/Library</code>和<code>~/Library</code>目录的区别？</p>
+<ul>
+<li><code>/System/Library</code>目录是存放Apple自己开发的软件</li>
+<li><code>/Library</code>目录是系统管理员存放的第三方软件</li>
+<li><code>~/Library/</code>是用户自己存放的第三方软件</li>
+</ul>
+<p><code>LaunchDaemons</code>和<code>LaunchAgents</code>的区别？</p>
+<ul>
+<li><code>LaunchDaemons</code>是用户未登陆前就启动的服务（守护进程）</li>
+<li><code>LaunchAgents</code>是用户登陆后启动的服务（守护进程）</li>
+</ul>
+<h5 id="3-加载plist文件"><a href="#3-加载plist文件" class="headerlink" title="3.加载plist文件"></a>3.加载<code>plist</code>文件</h5><p>相关命令如下：</p>
+<pre><code class="bash"># 加载任务
+launchctl load -w im.wangchao.schedulehosts.plist
+# 卸载任务
+launchctl unload -w im.wangchao.schedulehosts.plist
+# 查看任务列表
+launchctl list | grep &#39;im.wangchao.schedulehosts&#39;
+</code></pre>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Mac" style=color:#1bccbc>
+                Mac
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/周期" style=color:#ffa2c4>
+                周期
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Hosts" style=color:#1bccbc>
+                Hosts
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2017/06/20/easyhosts-config-schedule-upgrade/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2017/01/19/web-apply-https-certificate/">
+        <h2>
+            Https证书配置
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Web">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Web
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2017/1/19
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>这几天把自己的博客配置了Https证书,这里主要记录一下我的配置过程。</p>
+<p>首先采用的是<a target="_blank" rel="noopener" href="https://letsencrypt.org/">Let’s Encrypt</a>颁发的免费证书,其次我是使用<a target="_blank" rel="noopener" href="https://github.com/Neilpang/acme.sh">acme.sh</a>配置的,这里主要说一下<a target="_blank" rel="noopener" href="https://github.com/Neilpang/acme.sh">acme.sh</a>的安装以及使用。</p>
+<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><p>官方方法使用如下命令即可:</p>
+<pre><code class="bash">curl  https://get.acme.sh | sh
+</code></pre>
+<p>如果执行失败,可以下载master分之最新代码,解压之后进入目录执行如下命令:</p>
+<pre><code class="bash">./acme.sh --install
+</code></pre>
+<p>安装成功后,acme.sh脚本在~/.acme.sh目录中,所以如果想直接执行脚本,那么需要设置环境变量,后文中因为配置过了环境变量所以直接执行了acme.sh脚本。</p>
+<h2 id="2-配置"><a href="#2-配置" class="headerlink" title="2.配置"></a>2.配置</h2><p>安装成功后,我们需要创建一个存放<a target="_blank" rel="noopener" href="https://letsencrypt.org/">Let’s Encrypt</a>验证文件的文件夹(最好不要存放到root目录中),比如我们创建如下目录:</p>
+<pre><code>mkdir -p /www/acme-challenges
+</code></pre>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Web" style=color:#1bccbc>
+                Web
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Https" style=color:#ff7d73>
+                Https
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2017/01/19/web-apply-https-certificate/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2016/11/30/android-https-tls1-x/">
+        <h2>
+            Android 5.0以下TLS1.x SSLHandshakeException
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Android">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Android
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2016/11/30
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>最近把App的所有请求都换成Https,在测试的时候,部分手机发现请求失败,失败的异常信息如下:</p>
+<pre><code>javax.net.ssl.SSLHandshakeException: javax.net.ssl.SSLProtocolException: SSL handshake aborted: ssl=0x783e8e70: Failure in SSL library, usually a protocol error
+error:14077102:SSL routines:SSL23_GET_SERVER_HELLO:unsupported protocol (external/openssl/ssl/s23_clnt.c:714 0x71a20cf8:0x00000000)
+</code></pre>
+<p>该异常为握手失败,但是为什么有的手机可以成功有的手机又失败了呢,首先查看我们服务端接口TLS支持的版本为1.x,后来发现失败的手机都是5.x以下的版本,推测应该是和这个有关,然后查阅官方文档,<a target="_blank" rel="noopener" href="https://developer.android.com/reference/javax/net/ssl/SSLSocket.html?hl=zh-cn">SSLSocket</a>中有提到TLS版本和Android SDK版本的对应表,如下:</p>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Supported (API Levels)</th>
+<th>Enabled by default (API Levels)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SSLv3</td>
+<td>1+</td>
+<td>1+</td>
+</tr>
+<tr>
+<td>TLSv1</td>
+<td>1+</td>
+<td>1+</td>
+</tr>
+<tr>
+<td>TLSv1.1</td>
+<td>16+</td>
+<td>20+</td>
+</tr>
+<tr>
+<td>TLSv1.2</td>
+<td>16+</td>
+<td>20+</td>
+</tr>
+</tbody></table>
+<p>通过这个表看到,TLSv1.x(1.1,1.2)Android默认从API16开始支持,而从API20开始默认可用,这就可以解释之前为什么5.x以下手机在进行请求时失败了。</p>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Android" style=color:#879cff>
+                Android
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/TLSv1.x" style=color:#ffa2c4>
+                TLSv1.x
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2016/11/30/android-https-tls1-x/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2016/11/10/android-7-0-adapter/">
+        <h2>
+            Android 7.0 适配
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Android">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Android
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2016/11/10
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <p>Android 7.0 也出一阵子了，在这里分享一些关于 Android 7.0 适配的心得体会。</p>
+<p>首先你要知道 Android 7.0 强制执行了<code>StrictMode API 政策</code>，目录被限制了访问。所以在我们日常开发中建议开启<code>StrictMode</code>。</p>
+<p>在 Android 7.0 手机上，当我们调用相机照相，或者传递 <code>file://</code> Uri 到其它 App 时，我们会遇到<code>FileUriExposedException</code>异常，这是因为强制执行<code>StrictMode</code>后，禁止向其它 App 公开 <code>file://</code> Uri，也就是说当一个包含 <code>file://</code> Uri 的的 <code>Intent</code> 离开当前 App 时候就会出现<code>FileUriExposedException</code>异常。</p>
+<p>在 Android 7.0 上我们对应的解决方案就是使用<code>FileProvider</code>，获取一个<code>content://</code> Uri 来完成我们的操作（当然低于7.0的版本，我们还用原来的方法即可）。</p>
+<h3 id="FileProvider"><a href="#FileProvider" class="headerlink" title="FileProvider"></a>FileProvider</h3><p><a target="_blank" rel="noopener" href="https://developer.android.com/reference/android/support/v4/content/FileProvider.html">官方API</a></p>
+<p>首先创建自己的 <code>FileProvider</code>，为什么要创建自己的<code>FileProvider</code>，当我们的工程引入第三方库时，难免会引入已经注册<code>android.support.v4.content.FileProvider</code>的库，那么我们<code>AndroidManifest.xml</code>就是合并失败，为了避免我们可以定义自己的<code>FileProvider</code>,如下：</p>
+<pre><code class="java">package com.xxx.test.TestFileProvider;
+
+...
+
+public class TestProvider extends FileProvider &#123;
+    public static final String AUTHORITY = &quot;com.xxx.test.fileprovider&quot;;
+
+    public static Uri compatUriFromFile(Context context, File file)&#123;
+        return compatUriFromFile(context, file, null);
+    &#125;
+
+    public static Uri compatUriFromFile(Context context, File file, Intent intent) &#123;
+        if (!needUseProvider())&#123;
+            return Uri.fromFile(file);
+        &#125;
+
+        if (intent != null)&#123;
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        &#125;
+
+        return getUriForFile(context, AUTHORITY, file);
+    &#125;
+
+    public static boolean needUseProvider()&#123;
+        return Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N;
+    &#125;
+&#125;
+</code></pre>
+<p>然后在<code>AndroidManifest.xml</code>中注册我们的<code>FileProvider</code>，如下：</p>
+<pre><code class="xml">&lt;provider
+    android:name=&quot;com.xxx.test.TestProvider&quot;
+    android:authorities=&quot;com.xxx.test.fileprovider&quot;
+    android:exported=&quot;false&quot;
+    android:grantUriPermissions=&quot;true&quot;&gt;
+    &lt;meta-data
+        android:name=&quot;android.support.FILE_PROVIDER_PATHS&quot;
+        android:resource=&quot;@xml/file_paths&quot;/&gt;
+&lt;/provider&gt;
+</code></pre>
+<p>注意<code>exported:要求必须为false，若为true则会报安全异常</code>，<code>grantUriPermissions:true，表示授予 URI 临时访问权限</code>。</p>
+<p>接下来在<code>res</code>目录中创建<code>xml</code>目录，并在里面创建<code>file_paths.xml</code>文件。该文件中指定可以访问目录，如下：</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;paths xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+    &lt;external-path name=&quot;my_images&quot; path=&quot;Android/data/com.xxx.test/files/Pictures&quot; /&gt;
+&lt;/paths&gt;
+</code></pre>
+<p>我们主要看里面的节点，可以为<code>files-path</code>，<code>cache-path</code>，<code>external-path</code>，<code>external-files-path</code>和<code>external-cache-path</code>。</p>
+<ul>
+<li><code>files-path</code> 代表的根目录为：<code>Context.getFilesDir()</code></li>
+<li><code>cache-path</code> 代表的根目录为：<code>Context.getCacheDir()</code></li>
+<li><code>external-path</code> 代表的根目录为：<code>Environment.getExternalStorageDirectory()</code></li>
+<li><code>external-files-path</code> 代表的根目录为：<code>Context#getExternalFilesDir(String)</code></li>
+<li><code>external-cache-path</code> 代表的根目录为：<code>Context.getExternalCacheDir()</code></li>
+</ul>
+<p>节点的<code>path</code>属性代表相对目录，如果该属性设置为<code>&quot;&quot;</code>，那么代表可以访问根目录的所有文件，如果像上面那样配置，那么则可以访问<code>/storage/emulated/0/Android/data/com.xxx.test/files/Pictures</code>目录。</p>
+<p>配置完之后，我们就可以使用我们创建的<code>FileProvider</code>了，只需要将之前的<code>Uri.fromFile()</code>替换成<code>TestProvider.compatUriFromFile()</code>即可，比如调起照相机：</p>
+<pre><code class="java">Intent photoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+File file = null;
+try &#123;
+    // 创建文件
+    file = createImageFile();
+&#125; catch (IOException e) &#123;
+    e.printStackTrace();
+&#125;
+if (file != null)&#123;
+    photoIntent.putExtra(MediaStore.EXTRA_OUTPUT, TestProvider.compatUriFromFile(this, file, photoIntent));
+    startActivityForResult(photoIntent, CAPTURE_CUSTOM_FILE_REQUEST_CODE);
+&#125;
+</code></pre>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h4 id="低电耗模式"><a href="#低电耗模式" class="headerlink" title="低电耗模式"></a>低电耗模式</h4><p>在低电耗模式下，当用户设备未插接电源、处于静止状态且屏幕关闭时，该模式会推迟 CPU 和网络活动，从而延长电池寿命。<br>Android7.0通过在设备未插接电源且屏幕关闭状态下、但不一定要处于静止状态（例如用户外出时把手持式设备装在口袋里）时应用部分 CPU 和网络限制，进一步增强了低电耗模式。（也就是说，Android7.0会在手机屏幕关闭的状态下，限时应用对CPU以及网络的使用。）</p>
+<p>具体规则如下：</p>
+<ol>
+<li>当设备处于充电状态且屏幕已关闭一定时间后，设备会进入低电耗模式并应用第一部分限制： 关闭应用网络访问、推迟作业和同步。</li>
+<li>如果进入低电耗模式后设备处于静止状态达到一定时间，系统则会对 PowerManager.WakeLock、AlarmManager、GPS 和 Wi-Fi 扫描应用余下的低电耗模式限制。 无论是应用部分还是全部低电耗模式限制，系统都会唤醒设备以提供简短的维护时间窗口，在此窗口期间，应用程序可以访问网络并执行任何被推迟的作业/同步。</li>
+</ol>
+<h4 id="后台优化"><a href="#后台优化" class="headerlink" title="后台优化"></a>后台优化</h4><p><a target="_blank" rel="noopener" href="https://developer.android.com/preview/features/background-optimization.html">官方文档</a><br>Android 7.0中删除了三项隐式广播，以帮助优化内存使用和电量消耗。</p>
+<ol>
+<li>在 Android 7.0上 应用不会收到 <code>CONNECTIVITY_ACTION</code> 广播，即使你在manifest清单文件中设置了请求接受这些事件的通知。 但在前台运行的应用如果使用BroadcastReceiver请求接收通知，则仍可以在主线程中侦听<code>CONNECTIVITY_CHANGE</code>；</li>
+<li>在 Android 7.0上应用无法发送或接收 <code>ACTION_NEW_PICTURE</code> 或 <code>ACTION_NEW_VIDEO</code> 类型的广播。</li>
+</ol>
+<p>Android 框架提供多个解决方案来缓解对这些隐式广播的需求。 例如，<code>JobScheduler API</code>提供了一个稳健可靠的机制来安排满足指定条件（例如连入无限流量网络）时所执行的网络操作。 您甚至可以使用 <code>JobScheduler API</code> 来适应内容提供程序变化。</p>
+<p>移动设备会经历频繁的连接变更，例如在 Wi-Fi 和移动数据之间切换时。 目前，可以通过在应用清单中注册一个接收器来侦听隐式 <code>CONNECTIVITY_ACTION</code> 广播，让应用能够监控这些变更。 由于很多应用会注册接收此广播，因此单次网络切换即会导致所有应用被唤醒并同时处理此广播。</p>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Android" style=color:#00bcd4>
+                Android
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2016/11/10/android-7-0-adapter/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2016/11/10/android-about-activity-launchmode-and-taskstack/">
+        <h2>
+            Android Activity启动模式与影响任务栈的故事
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Android">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Android
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2016/11/10
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>Android开发中，Activity的使用是不可或缺的,在使用Activity的过程中通常会给特殊的Activity设置不同的启动模式,而这些启动模式也影响着Activity所在的任务栈,今天就先从Activity的启动模式说起,然后总结一些关于影响Activity任务栈的那些事。</p>
+<h2 id="Activity启动模式"><a href="#Activity启动模式" class="headerlink" title="Activity启动模式"></a>Activity启动模式</h2><h3 id="1-standard"><a href="#1-standard" class="headerlink" title="1.standard"></a>1.standard</h3><p>Activity标准启动模式，也是默认启动模式。在这种模式下启动的Activity可以被多次实例化，也就是说在同一个任务栈中可以存在多个Activity的实例，每个实例都会处理一个Intent对象。</p>
+<p>比如，我们有一个MainActivity，MainActivity的代码如下</p>
+<pre><code class="java">public class MainActivity extends AppCompatActivity &#123;
+    @Override protected void onCreate(Bundle savedInstanceState) &#123;
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        findViewById(R.id.mTestBtn).setOnClickListener(new View.OnClickListener() &#123;
+            @Override public void onClick(View v) &#123;
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            &#125;
+        &#125;);
+        setTitle(getClass().getSimpleName());
+        Log.e(&quot;wcwcwc&quot;, getClass().getSimpleName() + &quot; onCreate Task ID : &quot; + getTaskId());
+    &#125;
+&#125;
+</code></pre>
+<p>执行点击按钮跳转MainActivity，此时控制台的日志如下：</p>
+<pre><code>11-09 14:54:16.528 21613-21613/im.wangchao.launchemode E/wcwcwc: MainActivity onCreate Task ID : 5634
+11-09 14:54:18.198 21613-21613/im.wangchao.launchemode E/wcwcwc: MainActivity onCreate Task ID : 5634
+</code></pre>
+<p>可以看出创建的多个MainActivity的实例，并且它们是在同一个任务栈中。</p>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Android" style=color:#1bccbc>
+                Android
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2016/11/10/android-about-activity-launchmode-and-taskstack/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2016/10/19/android-java-dynamic-delegate/">
+        <h2>
+            Java,Android动态代理你需要知道的一些事
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Java">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Java
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2016/10/19
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <h3 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h3><p>首先,什么是代理,拿出你的手机,打开微信朋友圈,看看朋友圈的微商,这就是代理。代理就是一个对象代表代表另一个对象做其需要做的事,就像刚才说的微商,你的朋友就是代理了原厂商。现在大概知道了代理是什么,那么Android中有哪些代理呢,举个最简单的例子,我们都知道__Context__,__Context__就是使用了代理模式,__ContextImpl__实现了__Context__的所有功能,<strong>ContextWrapper__即为代理类,也实现了__Context__类,里面包含的__Context__引用为__ContextImpl</strong>,所以__ContextWrapper__调用的方法都是__ContextImpl__中的实现,这就是典型的代理模式。</p>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Android" style=color:#ffa2c4>
+                Android
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Java" style=color:#00bcd4>
+                Java
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2016/10/19/android-java-dynamic-delegate/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2016/10/12/electron-build-package/">
+        <h2>
+            Electron 打包
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Electron">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Electron
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2016/10/12
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>最近简单看了下<a target="_blank" rel="noopener" href="http://electron.atom.io/">Electron</a>,<a target="_blank" rel="noopener" href="http://electron.atom.io/">Electron</a>是什么?引用官网的一句话__Build cross platform desktop apps with JavaScript, HTML, and CSS__。简单的看了一下API然后做了一个小Demo,但是最后打包的时候还是查了一些资料,下面对打包做一个简单的介绍。</p>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Electron" style=color:#ff7d73>
+                Electron
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Javascript" style=color:#879cff>
+                Javascript
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2016/10/12/electron-build-package/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2016/10/12/android-badpracelableexception/">
+        <h2>
+            android.os.BadParcelableException
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Android">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Android
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2016/10/12
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <h3 id="异常说明"><a href="#异常说明" class="headerlink" title="异常说明"></a>异常说明</h3><p>今天在测试工程的时候,出现如下异常:</p>
+<pre><code class="java">Caused by android.os.BadParcelableException: ClassNotFoundException when unmarshalling:
+...
+android.os.Parcel.readParcelableCreator (Parcel.java:2203)
+android.view.View$BaseSavedState. (View.java:18696)
+...
+</code></pre>
+            
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Android" style=color:#ffa2c4>
+                Android
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Android-Exception" style=color:#879cff>
+                Android Exception
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2016/10/12/android-badpracelableexception/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2016/09/10/android-bolts-analyze-two/">
+        <h2>
+            Android Bolts Task 从入门到放弃(二)
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+        <span class="category">
+            <a href="/categories/Android">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" /></span>
+                Android
+            </a>
+        </span>
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2016/9/10
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <p>上一篇<a href="http://wangchao.im/2016/09/07/android-bolts-analyze/">文章</a>关于__Bolts Task__的使用做了简单的说明,这次我们注意解析一下__Bolts Task__的源码,来看看它具体是怎么实现的。</p>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Android" style=color:#ffa2c4>
+                Android
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Android-Bolts Task" style=color:#879cff>
+                Android Bolts Task
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2016/09/10/android-bolts-analyze-two/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+
+             
+<div class="page-current">
+
+    <div class="prev">
+        
+        <a href="/">
+            <span class="page-num">
+                <a-icon type="caret-left" theme="filled" />
+            </span>
+        </a>
+        
+    </div>
+
+    <div class="page-index">
+
+        
+        <span>
+
+            
+
+            
+            <a href="/">
+                <span class="page-num">
+                    1
+                </span>
+            </a>
+        </span>
+        
+
+        <span class="current">
+            2
+        </span>
+
+        
+        <span>
+            <a href="/page/3/">
+                <span class="page-num">
+                    3
+                </span>
+            </a>
+            
+            <a href="/page/4">
+                <span class="page-num">
+                    4
+                </span>
+            </a>
+            
+
+            
+            <span class="page-omit">...</span>
+            <a href="/page/5">
+                <span class="page-num">
+                    5
+                </span>
+            </a>
+            
+
+        </span>
+        
+
+    </div>
+
+    <div class="next">
+        
+        <a href="/page/3/ ">
+            <span class="page-num">
+                <a-icon type="caret-right" theme="filled" />
+            </span>
+        </a>
+        
+    </div>
+
+</div>
+
+        </div>
+    </div>
+    
+    <div id="home-card">
+        <a-affix :offset-top="card_top">
+    <a-card class="card-style" style="width: 300px">
+        <div class="avatar">
+            <img src="images/avatar.png " alt="头像">
+        </div>
+        <div class="name">
+            Wang Chao
+        </div>
+        <div class="descriptions">
+            
+            <div class="description">
+                正しさなんてもの
+            </div>
+            
+            <div class="description">
+                人のモノサシによって変わる
+            </div>
+            
+        </div>
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/korilin">
+
+                    
+                    <a-icon type="github"
+                        theme="filled" />
+                    
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://twitter.com/korilin_dev">
+
+                    
+                    <a-icon type="twitter"
+                        theme="" />
+                    
+                </a>
+            </span>
+            
+        </div>
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://en.korilin.com">
+                    英文技术博客
+                </a>
+            </div>
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://jp.korilin.com">
+                    日语记录博客
+                </a>
+            </div>
+            
+        </div>
+    </a-card>
+</a-affix>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2018 - 2021 M.O.T
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @Wang Chao
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+</body>
+
+</html>
